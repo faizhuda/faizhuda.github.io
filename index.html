@@ -1,287 +1,287 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>About Me 101</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="image/Logo IPB.ico?">
+    <style>
+        .navbar {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            padding: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
 
-    <head>
-        <title>About Me 101</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link rel="shortcut icon" type="image/x-icon" href="image/Logo IPB.ico?">
-        <style>
-            body {
-                margin: 0px;
-                background-color: black;
-            }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
 
-            p {
-                margin: 0px;
-            }
-            
-            .first-page {
-                display: flex;
-                background: rgb(255,0,0);
-                background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,82,82,1) 100%);
-                height: 500px;
-            }
-            
-            .first-page-left {
-                display: flex;
-                flex: 1;
-                justify-content: center;
-                align-items:end;
-            }
-            
-            .first-page-right {
-                display: flex;
-                flex-direction: column;
-                flex: 2.5;
-                justify-content: center;
-                
-            }
-            
-            .profile-picture {
-                height: 450px;
-            }
-            
-            .halo-kak {
-                font-family: Montserrat, Arial;
-                font-weight: bold;
-                font-size: 90px;
-                color: white;
-            }
-            
-            .nama {
-                font-family: Montserrat, Arial;
-                font-size: 40px;
-                color: white;
-                margin-left: 3px;
-            }
-            
-            .santai {
-                font-family: Montserrat, Arial;
-                font-size: 15px;
-                color: white;
-                margin-left: 5px;
-                margin-top: 5px;
-                font-style: italic;
-            }
-            
-            .black-page {
-                display: flex;
-                flex-direction: column;
-            }
-            
-            .second-page {
-                background-color: #000000;
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-            }
-            
-            .second-page-up {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                flex: 1;
-                background-color: black;
-            }
-            
-            .about-me {
-                color: white;
-                font-family: Montserrat, Arial;
-                font-weight: bold;
-                font-size: 40px;
-                color: white;
-                margin-top: 30px;
-                max-height: 250px;
-            }
-            
-            .deskripsi-diri {
-                font-family: Montserrat, Arial;
-                color: white;
-                text-align:center;
-                max-width: 80%;
-                margin-left: 40px;
-                margin-right: 40px;
-                margin-top: 20px;
-            }
-            
-            .second-page-new {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 200px;
-                background-color: black;
-            }
-            
-            .second-page-up-new {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 200px;
-                background-color: black;
-            }
-            
-            .logo-ipb {
-                width: 100px;
-                height: 100px;
-                object-fit: contain; margin-right: 30px;
-            }
-            
-            .logo-smabbi {
-                width: 100%;
-                height: 100px;
-                object-fit: contain;
-            }
-            
-            .third-page {
-                background-color: black;
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-            }
-            
-            .third-page-up {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                flex: 1;
-                background-color: black;
-            }
-            
-            .expertise {
-                color: white;
-                font-family: Montserrat, Arial;
-                font-weight: bold;
-                font-size: 40px;
-                color: white;
-                margin-top: 20px;
-            }
-            
-            .third-page-down {
-                margin-top: 60px;
-                margin-bottom: 60px;
-                background-color: black;
-                flex: 1;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            
-            .logo-photoshop{
-                width: 100px;
-                height: 100px;
-                object-fit: contain; margin-right: 30px;
-            }
-            
-            .logo-moonton {
-                width: 100px;
-                height: 100px;
-                object-fit: contain;
-            }
-            
-            .footer {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 40px;
-                background: rgb(255,0,0);
-                background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,82,82,1) 100%);
-            }
-            
-            .email {
-                font-family: Montserrat, Arial;
-                color: white;
-            }
+        .navbar ul li {
+            display: inline-block;
+        }
 
-            @media (width<768px){
-            .halo-kak {
-                font-family: Montserrat, Arial;
-                font-weight: bold;
-                font-size: 40px;
-                color: white;
-            }
+        .navbar ul li a {
+            text-decoration: none;
+            font-family: Montserrat, Arial;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            background-color: rgba(255, 82, 82, 0.8);
+            border-radius: 5px;
+            color: white;
+        }
         
-            .nama {
-                font-family: Montserrat, Arial;
-                font-size: 20px;
-                color: white;
-                margin-left: 3px;
-            }
+        body {
+            margin: 0;
+            background-color: black;
+            font-family: 'Montserrat', Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        p {
+            margin: 0;
+        }
         
-            .santai {
-                font-family: Montserrat, Arial;
-                font-size: 15px;
-                color: white;
-                margin-left: 5px;
-                margin-top: 5px;
-                font-style: italic;
-            }
-        
-            .profile-picture {
-                height: 400px;
+        .first-page {
+            display: flex;
+            background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,82,82,1) 100%);
+            height: 500px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .first-page-left {
+            display: flex;
+            flex: 1;
+            align-self: flex-end;
+            justify-content: center;
+            transition: all 0.3s ease-in-out;
+            padding-bottom: 0;
+        }
+
+        .first-page-left img {
+            height: 450px;
+        }
+        .profile-picture {
+            height: 450px;
+            transition: none;
+        }
+
+        .first-page-right {
+            display: flex;
+            flex-direction: column;
+            flex: 2.5;
+            justify-content: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards 0.5s;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
-            
-        </style>
-    </head>
 
-    <body>
-        <div class="first-page">
-            <div class="first-page-left">
-                <img class="profile-picture" src="image/Foto Gw PNG.png"> 
-            </div>
-            <div class="first-page-right">
-                <p class="halo-kak">Halo Semuanya!</p>
-                <p class="nama">Nama Saya Faiz Naufal Huda</p>
-                <p class="santai">(santai ini bukan web penolakan snbp)</p>
-            </div>
-        </div>
+        .halo-kak {
+            font-weight: bold;
+            font-size: 90px;
+            color: white;
+            transition: all 0.3s ease-in-out;
+        }
 
-        <div class="black-page">
-            <div class="second-page">
-                <div class="second-page-up">
-                    <p class="about-me">About Me</p>
-                    <p class="deskripsi-diri">
-                        Saya adalah mahasiswa Ilmu Komputer di Institut Pertanian Bogor (IPB) angkatan 60. Meskipun saya masih memiliki pengalaman yang terbatas dalam pemrograman, saya selalu berkomitmen untuk terus belajar dan mengembangkan keterampilan saya. Saya percaya bahwa dengan usaha dan ketekunan, saya dapat mencapai tingkat yang lebih tinggi dalam bidang ini. 
-                        Motivasi saya untuk belajar tidak hanya berasal dari keinginan untuk menguasai ilmu komputer, tetapi juga untuk membanggakan diri saya sendiri dan institusi tempat saya menempuh pendidikan. Saya bertekad untuk berkontribusi positif bagi perkembangan ilmu komputer di IPB dan di masyarakat luas. Dengan semangat yang tinggi, saya terus mencari peluang untuk meningkatkan kemampuan teknis dan non-teknis saya melalui berbagai proyek dan kolaborasi. Berikut adalah riwayat pendidikan saya:                </p>
-                </div>
-            </div>
+        .nama {
+            font-size: 40px;
+            color: white;
+            margin-left: 3px;
+        }
 
-            <div class="second-page-new">
-                <div class="second-page-up-new">
-                    <a href="https://www.ipb.ac.id/" target="_blank"><img class="logo-ipb" src="image/Logo IPB.png"></a>
-                    <a href="https://bogor.bosowaschool.sch.id/program/program_sma" target="_blank""><img src="image/Logo BI.png" alt="" class="logo-smabbi"></a>
-                </div>
-            </div>
-    
-            <div class="third-page">
-                <div class="third-page-up">
-                    <p class="expertise">Expertise</p>
-                </div>
-                <div class="third-page-down">
-                    <a href="https://www.canva.com/design/DAFrym0PqAs/V80s19mHEuRHAf3k6vm89Q/view?utm_content=DAFrym0PqAs&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank"><img class="logo-photoshop" src="image/Logo Photoshop.png"></a>
-                    <a href="https://m.mobilelegends.com/" target="_blank""><img src="image/Logo Moonton.png" alt="" class="logo-moonton"></a>
-                    </div>
-            </div>
+        .santai {
+            font-size: 15px;
+            color: white;
+            margin-left: 5px;
+            margin-top: 5px;
+            font-style: italic;
+        }
 
-            <div class="third-page">
-                <div class="third-page-up">
-                    <p class="expertise">My Socials</p>
-                </div>
-                <div class="third-page-down">
-                    <a href="https://www.instagram.com/faizhuda?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img class="logo-photoshop" src="image/Logo Instagram.png"></a>
-                    <a href="https://www.youtube.com/@faiznaufal2468" target="_blank""><img src="image/Logo Youtube.png" alt="" class="logo-moonton"></a>
-                </div>
-            </div>
-        </div>
+        .second-page {
+            display: flex;
+            flex-direction: column;
+            background-color: black;
+            padding: 40px 20px;
+        }
+
+        .second-page-new {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; 
+            height: 200px;
+            background-color: black;
+            transition: transform 0.5s ease;
+        }
+
+        .second-page-new img:hover {
+            transform: scale(1.1);
+        }
+
+        .second-page-new a img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .about-me {
+            color: white;
+            font-weight: bold;
+            font-size: 40px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .deskripsi-diri {
+            color: white;
+            text-align: center;
+            max-width: 80%;
+            margin: 0 auto;
+            opacity: 0;
+            animation: fadeIn 1s forwards 0.8s;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
         
-        <div class="footer">
-            <p class="email">faizhuda@apps.ipb.ac.id</p>
+
+        .third-page {
+            background-color: black;
+            padding: 60px 20px;
+        }
+
+        .expertise, .my-socials {
+            color: white;
+            font-weight: bold;
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .third-page-down {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .third-page-down a img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .third-page-down a img:hover {
+            transform: scale(1.1);
+        }
+
+        .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,82,82,1) 100%);
+        }
+
+        .email {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .halo-kak {
+                font-size: 40px;
+            }
+
+            .nama {
+                font-size: 20px;
+            }
+
+            .profile-picture {
+                height: 200px;
+            }
+}
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#socials">My Socials</a></li>
+        </ul>
+    </nav>
+    <div id="home" class="first-page">
+        <div class="first-page-left">
+            <img class="profile-picture" src="image/Foto Gw PNG.png"> 
         </div>
+        <div class="first-page-right">
+            <p class="halo-kak">Halo Semuanya!</p>
+            <p class="nama">Nama Saya Faiz Naufal Huda</p>
+            <p class="santai">(santai ini bukan web penolakan snbp)</p>
+        </div>
+    </div>
 
-    </body>
+    <div id="about" class="second-page">
+        <p class="about-me">About Me</p>
+        <p class="deskripsi-diri">
+            Saya adalah mahasiswa Ilmu Komputer di Institut Pertanian Bogor (IPB) angkatan 60. Saya selalu berkomitmen untuk terus belajar dan mengembangkan keterampilan saya. Dengan semangat yang tinggi, saya terus mencari peluang untuk meningkatkan kemampuan teknis dan non-teknis saya melalui berbagai proyek dan kolaborasi. Berikut adalah riwayat pendidikan saya:
+        </p>
+    </div>
 
+    <div class="second-page-new">
+        <a href="https://www.ipb.ac.id/" target="_blank"><img class="logo-ipb" src="image/Logo IPB.png"></a>
+        <a href="https://bogor.bosowaschool.sch.id/program/program_sma" target="_blank"><img src="image/Logo BI.png" alt="" class="logo-smabbi"></a>
+    </div>
+
+    <div id="expertise" class="third-page">
+        <p class="expertise">Expertise</p>
+        <div class="third-page-down">
+            <a href="https://www.canva.com" target="_blank"><img class="logo-photoshop" src="image/Logo Photoshop.png"></a>
+            <a href="https://m.mobilelegends.com/" target="_blank"><img src="image/Logo Moonton.png" alt="" class="logo-moonton"></a>
+        </div>
+    </div>
+
+    <div id="socials" class="third-page">
+        <p class="my-socials">My Socials</p>
+        <div class="third-page-down">
+            <a href="https://www.instagram.com/faizhuda" target="_blank"><img src="image/Logo Instagram.png" class="logo-photoshop"></a>
+            <a href="https://www.youtube.com/@faiznaufal2468" target="_blank"><img src="image/Logo Youtube.png" alt="" class="logo-moonton"></a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p class="email">faizhuda@apps.ipb.ac.id</p>
+    </div>
+</body>
 </html>
