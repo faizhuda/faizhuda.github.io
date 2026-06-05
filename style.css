@@ -306,12 +306,13 @@ a {
 }
 
 .hero-title {
-  font-size: 4rem;
-  line-height: 1.1;
+  font-size: clamp(2.2rem, 7vw, 3.8rem);
+  line-height: 1.2;
   margin-bottom: 20px;
 }
 
 .typewriter-text {
+  font-size: 0.85em;
   border-right: 2px solid var(--text-primary);
   white-space: nowrap;
   animation: blink 0.75s step-end infinite;
@@ -350,9 +351,9 @@ a {
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid var(--border-color);
-  aspect-ratio: 1;
-  width: 80%;
-  max-width: 380px;
+  aspect-ratio: 3/4;
+  width: 85%;
+  max-width: 320px;
   background: var(--bg-secondary);
 }
 
@@ -371,6 +372,7 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
   filter: grayscale(100%) contrast(1.1) brightness(0.95);
   transition: var(--transition-slow);
 }
@@ -500,7 +502,7 @@ a {
 /* Projects Section */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
 
@@ -739,7 +741,10 @@ a {
   }
   
   .hero-title {
-    font-size: 3rem;
+    font-size: clamp(2rem, 7vw, 3rem);
+  }
+  .hero-image-wrapper {
+    max-width: 250px;
   }
   
   .about-grid {
