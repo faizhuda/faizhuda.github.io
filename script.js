@@ -7,8 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (menuToggle && navMenu && navbar) {
     menuToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
+      const isActive = navMenu.classList.toggle('active');
       navbar.classList.toggle('menu-open');
+      
+      if (isActive) {
+        document.body.classList.add('scroll-lock');
+      } else {
+        document.body.classList.remove('scroll-lock');
+      }
     });
 
     // Close menu when clicking link
@@ -16,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('active');
         navbar.classList.remove('menu-open');
+        document.body.classList.remove('scroll-lock');
       });
     });
   }
@@ -102,17 +109,45 @@ document.addEventListener('DOMContentLoaded', () => {
     btnCopy.addEventListener('click', () => {
       const email = emailText.textContent.trim();
       
-      navigator.clipboard.writeText(email).then(() => {
-        // Show Toast Notification
+      function showToast() {
         toast.classList.add('show');
-        
-        // Hide after 3 seconds
         setTimeout(() => {
           toast.classList.remove('show');
         }, 3000);
-      }).catch(err => {
-        console.error('Failed to copy text: ', err);
-      });
+      }
+      
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(() => {
+          showToast();
+        }).catch(err => {
+          console.error('Failed to copy text (clipboard API): ', err);
+          fallbackCopy(email);
+        });
+      } else {
+        fallbackCopy(email);
+      }
+      
+      function fallbackCopy(text) {
+        try {
+          const textArea = document.createElement("textarea");
+          textArea.value = text;
+          textArea.style.top = "0";
+          textArea.style.left = "0";
+          textArea.style.position = "fixed";
+          document.body.appendChild(textArea);
+          textArea.focus();
+          textArea.select();
+          const successful = document.execCommand('copy');
+          document.body.removeChild(textArea);
+          if (successful) {
+            showToast();
+          } else {
+            console.error('Fallback copy command was unsuccessful');
+          }
+        } catch (err) {
+          console.error('Fallback copy failed: ', err);
+        }
+      }
     });
   }
 
