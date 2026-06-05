@@ -446,10 +446,19 @@ a {
   margin-bottom: 4px;
 }
 
-.timeline-title {
+h3.timeline-title {
   font-size: 1.15rem;
   font-weight: 600;
   margin-bottom: 4px;
+}
+
+.timeline-title a {
+  transition: var(--transition-smooth);
+}
+
+.timeline-title a:hover {
+  text-decoration: underline;
+  color: var(--text-primary);
 }
 
 .timeline-subtitle {
@@ -632,6 +641,12 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  transition: var(--transition-smooth);
+}
+
+.email-text:hover {
+  text-decoration: underline;
+  opacity: 0.85;
 }
 
 .btn-copy {
