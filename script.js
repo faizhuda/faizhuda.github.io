@@ -31,10 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const typewriterElement = document.getElementById('typewriter');
   if (typewriterElement) {
     const titles = [
+      "ML Engineer",
+      "Full-Stack Developer",
       "Computer Science Student",
-      "Aspiring Data Analyst",
-      "Data & Tech Enthusiast",
-      "Problem Solver"
+      "DevOps Enthusiast"
     ];
     let titleIndex = 0;
     let charIndex = 0;
