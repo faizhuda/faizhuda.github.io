@@ -46,7 +46,7 @@
 
 #section("Summary")
 Computer Science undergraduate at IPB University (GPA: 3.82/4.00) with hands-on experience
-building production-grade systems end-to-end — from a full-stack academic document management
+building production-grade systems end-to-end, from a full-stack academic document management
 system (118 tests, Clean Architecture) to an award-winning hackathon e-commerce platform and
 ML pipelines with CI/CD, Docker, and transformer fine-tuning. Selected participant in the
 Pijak × IBM SkillsBuild AI Engineer Cohort. Fluent in English (TOEFL ITP 607).
