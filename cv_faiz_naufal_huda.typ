@@ -61,9 +61,9 @@ Pijak × IBM SkillsBuild AI Engineer Cohort. Fluent in English (TOEFL ITP 607).
   [*Languages:*],       [Python, JavaScript, TypeScript, SQL],
   [*Frontend:*],        [React 18, Tailwind CSS, Vite],
   [*Backend & DB:*],    [FastAPI, SQLAlchemy 2.0, PostgreSQL, JWT + bcrypt, Alembic],
-  [*ML / Data:*],       [LightGBM, Scikit-learn, Pandas, NumPy],
+  [*ML / Data:*],       [LightGBM, XGBoost, Scikit-learn, Pandas, NumPy],
   [*DevOps / Tools:*],  [Docker, GitHub Actions (CI/CD), Git, pytest],
-  [*Familiar:*],        [Next.js, Supabase, PyTorch, Hugging Face Transformers, TensorFlow/Keras, XGBoost, MLflow, Prometheus, Grafana, Weights & Biases, Bash, ReportLab, PyPDF],
+  [*Familiar:*],        [Next.js, Supabase, PyTorch, Hugging Face Transformers, TensorFlow/Keras, MLflow, Prometheus, Grafana, Weights & Biases, Bash, ReportLab, PyPDF],
 )
 
 // ── Experience ──────────────────────────────────────────────────────────────
