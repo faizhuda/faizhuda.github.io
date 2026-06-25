@@ -46,7 +46,7 @@
 
 #section("Summary")
 Computer Science undergraduate at IPB University (GPA: 3.82/4.00) with hands-on experience
-building production-grade systems end-to-end, from a full-stack academic document management
+building complete, well-tested systems end-to-end, from a full-stack academic document management
 system (118 tests, Clean Architecture) to an award-winning hackathon e-commerce platform and
 ML pipelines with CI/CD, Docker, and transformer fine-tuning. Selected participant in the
 Pijak × IBM SkillsBuild AI Engineer Cohort. Fluent in English (TOEFL ITP 607).
@@ -58,12 +58,12 @@ Pijak × IBM SkillsBuild AI Engineer Cohort. Fluent in English (TOEFL ITP 607).
   columns: (auto, 1fr),
   column-gutter: 6pt,
   row-gutter: 2pt,
-  [*Languages:*],       [Python, JavaScript, TypeScript, SQL, Bash],
-  [*Frontend:*],        [React 18, Next.js, Vite, Tailwind CSS, Framer Motion],
-  [*Backend & DB:*],    [FastAPI, SQLAlchemy 2.0, PostgreSQL, Supabase, JWT + bcrypt, Alembic],
-  [*ML / Data:*],       [LightGBM, XGBoost, Scikit-learn, PyTorch, Hugging Face Transformers, TensorFlow/Keras, Pandas, NumPy],
-  [*DevOps / Infra:*],  [Docker, GitHub Actions (CI/CD), MLflow, Prometheus, Grafana, Weights & Biases, Git],
-  [*Other:*],           [ReportLab, PyPDF, qrcode, Pillow, Recharts],
+  [*Languages:*],       [Python, JavaScript, TypeScript, SQL],
+  [*Frontend:*],        [React 18, Tailwind CSS, Vite],
+  [*Backend & DB:*],    [FastAPI, SQLAlchemy 2.0, PostgreSQL, JWT + bcrypt, Alembic],
+  [*ML / Data:*],       [LightGBM, Scikit-learn, Pandas, NumPy],
+  [*DevOps / Tools:*],  [Docker, GitHub Actions (CI/CD), Git, pytest],
+  [*Familiar:*],        [Next.js, Supabase, PyTorch, Hugging Face Transformers, TensorFlow/Keras, XGBoost, MLflow, Prometheus, Grafana, Weights & Biases, Bash, ReportLab, PyPDF],
 )
 
 // ── Experience ──────────────────────────────────────────────────────────────
