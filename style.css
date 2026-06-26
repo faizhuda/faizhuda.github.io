@@ -315,6 +315,7 @@ a {
   font-size: clamp(2.2rem, 7vw, 3.8rem);
   line-height: 1.2;
   margin-bottom: 20px;
+  overflow: hidden;
 }
 
 .typewriter-text {
