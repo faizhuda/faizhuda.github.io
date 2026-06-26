@@ -643,7 +643,7 @@ h3.timeline-title {
 
 /* Contact Section */
 .contact-container {
-  max-width: 600px;
+  max-width: 480px;
   margin: 0 auto;
 }
 
@@ -1024,7 +1024,7 @@ h3.timeline-title {
 
 .form-group-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 20px;
   margin-bottom: 20px;
 }
