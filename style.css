@@ -289,6 +289,8 @@ a {
 
 .hero-content {
   min-width: 0;
+  width: 100%;
+  max-width: 100%;
   overflow: hidden;
   opacity: 0;
   transform: translateY(20px);
@@ -316,13 +318,15 @@ a {
   line-height: 1.2;
   margin-bottom: 20px;
   overflow: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 .typewriter-text {
   display: block;
   height: 1.2em;
   line-height: 1.2;
-  font-size: 0.78em;
+  font-size: 0.75em;
   border-right: 2px solid var(--text-primary);
   white-space: nowrap;
   overflow: hidden;
@@ -792,7 +796,7 @@ h3.timeline-title {
   }
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 40px;
     text-align: center;
     padding-top: 0;
   }
@@ -816,6 +820,12 @@ h3.timeline-title {
   .hero-title {
     font-size: clamp(2rem, 7vw, 3rem);
   }
+
+  .typewriter-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
   .hero-image-wrapper {
     max-width: 250px;
   }
@@ -827,8 +837,16 @@ h3.timeline-title {
 }
 
 @media (max-width: 768px) {
+  .section {
+    padding: 64px 0;
+  }
+  
   .section-title {
     font-size: 2rem;
+  }
+  
+  .section-subtitle {
+    margin-bottom: 32px;
   }
   
   .nav-menu {
