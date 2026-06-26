@@ -169,6 +169,217 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   });
 
+  // --- CUSTOM CURSOR ---
+  const cursorDot = document.querySelector('.custom-cursor-dot');
+  const cursorOutline = document.querySelector('.custom-cursor-outline');
+  
+  if (cursorDot && cursorOutline) {
+    let mouseX = 0;
+    let mouseY = 0;
+    let outlineX = 0;
+    let outlineY = 0;
+    
+    // Check if device supports hover (is it a desktop/laptop with a mouse?)
+    const hasHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    
+    if (hasHover) {
+      window.addEventListener('mousemove', e => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        
+        // Instant position for the inner dot
+        cursorDot.style.left = `${mouseX}px`;
+        cursorDot.style.top = `${mouseY}px`;
+      }, { passive: true });
+      
+      // Animation loop for smooth lag effect on outer outline
+      const animateCursor = () => {
+        outlineX += (mouseX - outlineX) * 0.15;
+        outlineY += (mouseY - outlineY) * 0.15;
+        
+        cursorOutline.style.left = `${outlineX}px`;
+        cursorOutline.style.top = `${outlineY}px`;
+        
+        requestAnimationFrame(animateCursor);
+      };
+      requestAnimationFrame(animateCursor);
+      
+      // Bind hover state on links/buttons
+      const interactiveElements = document.querySelectorAll(
+        'a, button, .btn, .logo, .social-icon-link, .email-copy-box, .skill-badge, .filter-btn'
+      );
+      interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          document.body.classList.add('cursor-hovered');
+        });
+        el.addEventListener('mouseleave', () => {
+          document.body.classList.remove('cursor-hovered');
+        });
+      });
+    }
+  }
+
+  // --- SCROLL PROGRESS BAR ---
+  const scrollBar = document.getElementById('scroll-bar');
+  if (scrollBar) {
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrollPercentage = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+      scrollBar.style.width = `${scrollPercentage}%`;
+    }, { passive: true });
+  }
+
+  // --- PROJECT FILTERS ---
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const projectCards = document.querySelectorAll('.project-card');
+  
+  if (filterButtons.length > 0 && projectCards.length > 0) {
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Toggle active button
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        const filterValue = btn.getAttribute('data-filter');
+        
+        projectCards.forEach(card => {
+          const cardCategory = card.getAttribute('data-category');
+          
+          if (filterValue === 'all' || cardCategory === filterValue) {
+            // First show the element if it was display none
+            card.classList.remove('hidden');
+            // Trigger reflow to let the transition animate
+            void card.offsetWidth;
+            card.classList.remove('fade-out');
+          } else {
+            // Fade out first
+            card.classList.add('fade-out');
+            // Hide display once animation finishes
+            card.addEventListener('transitionend', function hideCard(e) {
+              if (e.propertyName === 'opacity' && card.classList.contains('fade-out')) {
+                card.classList.add('hidden');
+                card.removeEventListener('transitionend', hideCard);
+              }
+            });
+          }
+        });
+      });
+    });
+  }
+
+  // --- CV PREVIEW MODAL ---
+  const btnCv = document.getElementById('btn-cv');
+  const cvModal = document.getElementById('cv-modal');
+  const cvModalClose = document.getElementById('cv-modal-close');
+  const cvModalBackdrop = document.getElementById('cv-modal-backdrop');
+  
+  if (btnCv && cvModal && cvModalClose && cvModalBackdrop) {
+    const openModal = () => {
+      cvModal.classList.add('active');
+      document.body.classList.add('scroll-lock');
+    };
+    
+    const closeModal = () => {
+      cvModal.classList.remove('active');
+      document.body.classList.remove('scroll-lock');
+    };
+    
+    btnCv.addEventListener('click', openModal);
+    cvModalClose.addEventListener('click', closeModal);
+    cvModalBackdrop.addEventListener('click', closeModal);
+    
+    // Close on Escape key press
+    window.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && cvModal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+  }
+
+  // --- CONTACT FORM SUBMISSION ---
+  const contactForm = document.getElementById('contact-form');
+  const btnSubmit = document.getElementById('btn-submit');
+  
+  if (contactForm && btnSubmit) {
+    const submitText = btnSubmit.querySelector('span');
+    const originalText = submitText ? submitText.textContent : 'Send Message';
+    
+    contactForm.addEventListener('submit', e => {
+      e.preventDefault();
+      
+      // Update sending visual state
+      if (submitText) submitText.textContent = 'Sending...';
+      btnSubmit.disabled = true;
+      
+      const formData = new FormData(contactForm);
+      const jsonObject = {};
+      formData.forEach((value, key) => {
+        jsonObject[key] = value;
+      });
+      
+      // If Web3Forms placeholder key is present, alert user or run fallback
+      if (jsonObject['access_key'] === 'YOUR_ACCESS_KEY_HERE') {
+        setTimeout(() => {
+          alert('Message sent successfully! (Note: Replace placeholder Web3Forms API Key with your own in index.html to get real emails).');
+          if (submitText) submitText.textContent = originalText;
+          btnSubmit.disabled = false;
+          contactForm.reset();
+          
+          // Trigger copy email toast as a simulated success alert
+          const toast = document.getElementById('toast');
+          if (toast) {
+            toast.textContent = 'Message sent! (Simulated Mode)';
+            toast.classList.add('show');
+            setTimeout(() => {
+              toast.classList.remove('show');
+              toast.textContent = 'Email copied to clipboard!';
+            }, 3000);
+          }
+        }, 1000);
+        return;
+      }
+      
+      // Async post submit to Web3Forms
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(jsonObject)
+      })
+      .then(async response => {
+        let json = await response.json();
+        if (response.status === 200) {
+          // Success
+          contactForm.reset();
+          const toast = document.getElementById('toast');
+          if (toast) {
+            toast.textContent = 'Message sent successfully!';
+            toast.classList.add('show');
+            setTimeout(() => {
+              toast.classList.remove('show');
+              toast.textContent = 'Email copied to clipboard!';
+            }, 3000);
+          }
+        } else {
+          // Error response
+          console.error(json);
+          alert('Submission failed: ' + (json.message || 'Unknown error'));
+        }
+      })
+      .catch(error => {
+        console.error(error);
+        alert('An error occurred during submission.');
+      })
+      .finally(() => {
+        if (submitText) submitText.textContent = originalText;
+        btnSubmit.disabled = false;
+      });
+    });
+  }
+
   // --- DYNAMIC YEAR UPDATE ---
   const currentYearSpan = document.getElementById('current-year');
   if (currentYearSpan) {

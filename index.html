@@ -61,12 +61,18 @@
     <link rel="shortcut icon" type="image/x-icon" href="image/Logo IPB.ico">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css?v=18">
+    <link rel="stylesheet" href="style.css?v=19">
 </head>
 <body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor-dot"></div>
+    <div class="custom-cursor-outline"></div>
 
     <!-- Sticky Navigation -->
     <nav class="navbar" id="navbar">
+        <div class="scroll-progress-container">
+            <div class="scroll-progress-bar" id="scroll-bar"></div>
+        </div>
         <div class="container navbar-container">
             <a href="#home" class="logo" id="nav-logo">
                 faizhuda<span>.</span>
@@ -105,10 +111,10 @@
                         Connect on LinkedIn
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                     </a>
-                    <a href="cv_faiz_naufal_huda.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="btn-cv">
-                        Download CV
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    </a>
+                    <button class="btn btn-secondary" id="btn-cv">
+                        View CV
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                    </button>
                 </div>
             </div>
             
@@ -259,9 +265,17 @@
             <h2 class="section-title fade-up-element" id="projects-title">Featured Projects</h2>
             <p class="section-subtitle fade-up-element">Engineering & ML Showcases</p>
 
+            <!-- Project Filters -->
+            <div class="project-filters fade-up-element" id="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ml-data">ML & Data Science</button>
+                <button class="filter-btn" data-filter="full-stack">Full-Stack</button>
+                <button class="filter-btn" data-filter="devops-cloud">DevOps & Cloud</button>
+            </div>
+
             <div class="projects-grid">
                 <!-- Project 1: AgritechJam -->
-                <div class="glass-card project-card fade-up-element" id="project-agritechjam">
+                <div class="glass-card project-card fade-up-element" id="project-agritechjam" data-category="full-stack">
                     <div class="project-header">
                         <h3 class="project-title">MyToko: E-Commerce Platform</h3>
                         <p class="project-tag">AgritechJam · Agriinformatics 2025 · 2nd Place</p>
@@ -284,7 +298,7 @@
                 </div>
 
                 <!-- Project 2: AQI Bangladesh -->
-                <div class="glass-card project-card fade-up-element" id="project-aqi-bangladesh">
+                <div class="glass-card project-card fade-up-element" id="project-aqi-bangladesh" data-category="ml-data">
                     <div class="project-header">
                         <h3 class="project-title">AQI Bangladesh Prediction</h3>
                         <p class="project-tag">Machine Learning</p>
@@ -307,7 +321,7 @@
                 </div>
 
                 <!-- Project 3: AgriDesk -->
-                <div class="glass-card project-card fade-up-element" id="project-agridesk">
+                <div class="glass-card project-card fade-up-element" id="project-agridesk" data-category="full-stack">
                     <div class="project-header">
                         <h3 class="project-title">AgriDesk: Document Management System</h3>
                         <p class="project-tag">Full-Stack · Clean Architecture</p>
@@ -330,7 +344,7 @@
                 </div>
 
                 <!-- Project 4: Bananacoal -->
-                <div class="glass-card project-card fade-up-element" id="project-bananacoal">
+                <div class="glass-card project-card fade-up-element" id="project-bananacoal" data-category="ml-data">
                     <div class="project-header">
                         <h3 class="project-title">LTI Incident Risk Prediction</h3>
                         <p class="project-tag">Associate Data Scientist (BNSP)</p>
@@ -351,7 +365,7 @@
                 </div>
 
                 <!-- Project 5: Infrastructure Monitoring -->
-                <div class="glass-card project-card fade-up-element" id="project-monitoring">
+                <div class="glass-card project-card fade-up-element" id="project-monitoring" data-category="devops-cloud">
                     <div class="project-header">
                         <h3 class="project-title">Infrastructure Monitoring System</h3>
                         <p class="project-tag">DevOps & Observability</p>
@@ -373,7 +387,7 @@
                 </div>
 
                 <!-- Project 6: Portfolio -->
-                <div class="glass-card project-card fade-up-element" id="project-portfolio-website">
+                <div class="glass-card project-card fade-up-element" id="project-portfolio-website" data-category="full-stack">
                     <div class="project-header">
                         <h3 class="project-title">Obsidian Noir Portfolio</h3>
                         <p class="project-tag">Web Development</p>
@@ -411,6 +425,32 @@
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                     </button>
                 </div>
+
+                <!-- Contact Form -->
+                <form id="contact-form" class="contact-form">
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    <input type="hidden" name="subject" value="New Contact Form Submission - Portfolio">
+                    <input type="checkbox" name="botcheck" class="hidden-field" style="display: none;">
+
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label for="form-name">Name</label>
+                            <input type="text" id="form-name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email">Email</label>
+                            <input type="email" id="form-email" name="email" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="form-message">Message</label>
+                        <textarea id="form-message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit" id="btn-submit">
+                        <span>Send Message</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    </button>
+                </form>
                 
                 <div class="socials-wrapper">
                     <p class="socials-title">Follow me on</p>
@@ -445,6 +485,26 @@
         Email copied to clipboard!
     </div>
 
+    <!-- CV Preview Modal -->
+    <div class="modal" id="cv-modal">
+        <div class="modal-backdrop" id="cv-modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Curriculum Vitae</h3>
+                <button class="modal-close" id="cv-modal-close" aria-label="Close Preview">&times;</button>
+            </div>
+            <div class="modal-body">
+                <iframe src="cv_faiz_naufal_huda.pdf" title="CV Faiz Naufal Huda Preview" class="cv-iframe"></iframe>
+            </div>
+            <div class="modal-footer">
+                <a href="cv_faiz_naufal_huda.pdf" download class="btn btn-primary" id="btn-modal-download">
+                    <span>Download PDF</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -453,6 +513,6 @@
     </footer>
 
     <!-- Custom JS -->
-    <script src="script.js?v=12"></script>
+    <script src="script.js?v=13"></script>
 </body>
 </html>
