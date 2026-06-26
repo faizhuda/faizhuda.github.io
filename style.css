@@ -320,7 +320,8 @@ a {
 
 .typewriter-text {
   display: block;
-  min-height: 1.2em;
+  height: 1.2em;
+  line-height: 1.2;
   font-size: 0.78em;
   border-right: 2px solid var(--text-primary);
   white-space: nowrap;
