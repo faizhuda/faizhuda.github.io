@@ -61,7 +61,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="image/Logo IPB.ico">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css?v=24">
+    <link rel="stylesheet" href="style.css?v=25">
 </head>
 <body>
 
@@ -410,67 +410,75 @@
     <section id="contact" class="section">
         <div class="container contact-container">
             <div class="glass-card contact-card fade-up-element" id="contact-wrapper">
-                <h2 class="contact-title">Let's Connect</h2>
-                <p class="contact-desc">
-                    I am actively seeking internship opportunities in software engineering or ML engineering. Feel free to reach out!
-                </p>
-                
-                <div class="email-copy-box">
-                    <a href="mailto:faiznaufal2015@gmail.com" target="_blank" rel="noopener noreferrer" class="email-text">faiznaufal2015@gmail.com</a>
-                    <button class="btn-copy" aria-label="Copy Email to Clipboard">
-                        <span>Copy Email</span>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                    </button>
-                </div>
-
-                <!-- Contact Form -->
-                <form id="contact-form" class="contact-form">
-                    <input type="hidden" name="access_key" value="6382a77f-b50a-426b-8dd0-5069503932c3">
-                    <input type="hidden" name="subject" value="New Contact Form Submission - Portfolio">
-                    <input type="checkbox" name="botcheck" class="hidden-field" style="display: none;">
-
-                    <div class="form-group-row">
-                        <div class="form-group">
-                            <label for="form-name">Name</label>
-                            <input type="text" id="form-name" name="name" placeholder="John Doe" required>
+                <div class="contact-grid">
+                    <!-- Left Column: Info -->
+                    <div class="contact-info">
+                        <h2 class="contact-title">Let's Connect</h2>
+                        <p class="contact-desc">
+                            I am actively seeking internship opportunities in software engineering or ML engineering. Feel free to reach out!
+                        </p>
+                        
+                        <div class="email-copy-box">
+                            <a href="mailto:faiznaufal2015@gmail.com" target="_blank" rel="noopener noreferrer" class="email-text">faiznaufal2015@gmail.com</a>
+                            <button class="btn-copy" aria-label="Copy Email to Clipboard">
+                                <span>Copy Email</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                            </button>
                         </div>
-                        <div class="form-group">
-                            <label for="form-email">Email</label>
-                            <input type="email" id="form-email" name="email" placeholder="john@example.com" required>
+                        
+                        <div class="socials-wrapper">
+                            <p class="socials-title">Follow me on</p>
+                            <div class="socials-links">
+                                <!-- LinkedIn -->
+                                <a href="https://www.linkedin.com/in/faizhuda" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="LinkedIn Profile">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                                </a>
+                                
+                                <!-- GitHub -->
+                                <a href="https://github.com/faizhuda" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="GitHub Profile">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                </a>
+                                
+                                <!-- Instagram -->
+                                <a href="https://www.instagram.com/faizhuda" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="Instagram Profile">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                                </a>
+                                
+                                <!-- YouTube -->
+                                <a href="https://www.youtube.com/@faiznaufal2468" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="YouTube Channel">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="form-message">Message</label>
-                        <textarea id="form-message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-submit" id="btn-submit">
-                        <span>Send Message</span>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-                    </button>
-                </form>
-                
-                <div class="socials-wrapper">
-                    <p class="socials-title">Follow me on</p>
-                    <div class="socials-links">
-                        <!-- LinkedIn -->
-                        <a href="https://www.linkedin.com/in/faizhuda" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="LinkedIn Profile">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                        </a>
-                        
-                        <!-- GitHub -->
-                        <a href="https://github.com/faizhuda" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="GitHub Profile">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                        </a>
-                        
-                        <!-- Instagram -->
-                        <a href="https://www.instagram.com/faizhuda" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="Instagram Profile">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                        </a>
-                        
-                        <!-- YouTube -->
-                        <a href="https://www.youtube.com/@faiznaufal2468" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="YouTube Channel">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
-                        </a>
+
+                    <!-- Right Column: Form -->
+                    <div class="contact-form-wrapper">
+                        <!-- Contact Form -->
+                        <form id="contact-form" class="contact-form">
+                            <input type="hidden" name="access_key" value="6382a77f-b50a-426b-8dd0-5069503932c3">
+                            <input type="hidden" name="subject" value="New Contact Form Submission - Portfolio">
+                            <input type="checkbox" name="botcheck" class="hidden-field" style="display: none;">
+
+                            <div class="form-group-row">
+                                <div class="form-group">
+                                    <label for="form-name">Name</label>
+                                    <input type="text" id="form-name" name="name" placeholder="John Doe" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-email">Email</label>
+                                    <input type="email" id="form-email" name="email" placeholder="john@example.com" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message">Message</label>
+                                <textarea id="form-message" name="message" rows="3" placeholder="Write your message here..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit" id="btn-submit">
+                                <span>Send Message</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -510,6 +518,6 @@
     </footer>
 
     <!-- Custom JS -->
-    <script src="script.js?v=18"></script>
+    <script src="script.js?v=19"></script>
 </body>
 </html>

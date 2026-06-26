@@ -647,13 +647,26 @@ h3.timeline-title {
 }
 
 .contact-container {
-  max-width: 520px;
+  max-width: 850px;
   margin: 0 auto;
 }
 
 .contact-card {
-  text-align: center;
-  padding: 36px 24px;
+  text-align: left;
+  padding: 40px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .contact-title {
@@ -662,9 +675,8 @@ h3.timeline-title {
 }
 
 .contact-desc {
-  max-width: 500px;
-  margin: 0 auto 30px auto;
   font-size: 1.05rem;
+  margin: 0 0 24px 0;
 }
 
 .email-copy-box {
@@ -725,8 +737,6 @@ h3.timeline-title {
 /* Social Grid */
 .socials-wrapper {
   margin-top: 24px;
-  border-top: 1px solid var(--border-color);
-  padding-top: 20px;
 }
 
 .socials-title {
@@ -740,8 +750,8 @@ h3.timeline-title {
 
 .socials-links {
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  justify-content: flex-start;
+  gap: 16px;
 }
 
 .social-icon-link {
@@ -1082,9 +1092,28 @@ h3.timeline-title {
 }
 
 @media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .contact-card {
+    text-align: center;
+    padding: 32px 20px;
+  }
+  .contact-desc {
+    margin: 0 auto 24px auto;
+  }
   .form-group-row {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+  .socials-wrapper {
+    margin-top: 30px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 24px;
+  }
+  .socials-links {
+    justify-content: center;
   }
 }
 
