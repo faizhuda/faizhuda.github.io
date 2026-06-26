@@ -282,12 +282,13 @@ a {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) 380px;
   align-items: center;
   gap: 60px;
 }
 
 .hero-content {
+  min-width: 0;
   opacity: 0;
   transform: translateY(20px);
   animation: slideIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -376,8 +377,8 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
-  transform: translateY(-29%) scale(2.15);
+  object-position: 46% top;
+  transform: translateY(-9%) scale(1.9);
   transform-origin: top center;
   filter: grayscale(100%) contrast(1.1) brightness(0.95);
   transition: var(--transition-slow);
@@ -385,7 +386,7 @@ a {
 
 .hero-image-wrapper:hover .hero-img {
   filter: grayscale(0%) contrast(1) brightness(1);
-  transform: translateY(-29%) scale(2.22);
+  transform: translateY(-9%) scale(1.96);
   transform-origin: top center;
 }
 
@@ -778,12 +779,12 @@ h3.timeline-title {
 @media (max-width: 992px) {
   .hero {
     min-height: auto;
-    padding-top: 96px;
+    padding-top: 80px;
     padding-bottom: 48px;
   }
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 28px;
     text-align: center;
     padding-top: 0;
   }
