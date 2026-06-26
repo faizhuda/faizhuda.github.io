@@ -1064,6 +1064,7 @@ h3.timeline-title {
 
 .form-group input,
 .form-group textarea {
+  width: 100%;
   background-color: var(--bg-primary);
   border: 1px solid var(--border-color);
   color: var(--text-primary);
