@@ -100,25 +100,35 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeUpElements.forEach(el => el.classList.add('visible'));
   }
 
+  // --- TOAST HELPER & CENTRAL NOTIFICATION SYSTEM ---
+  const toast = document.getElementById('toast');
+  let toastTimeout = null;
+
+  function showToastNotification(message) {
+    if (!toast) return;
+    toast.textContent = message;
+    toast.classList.add('show');
+    
+    if (toastTimeout) {
+      clearTimeout(toastTimeout);
+    }
+    
+    toastTimeout = setTimeout(() => {
+      toast.classList.remove('show');
+    }, 3000);
+  }
+
   // --- COPY EMAIL TO CLIPBOARD ---
   const btnCopy = document.querySelector('.btn-copy');
   const emailText = document.querySelector('.email-text');
-  const toast = document.getElementById('toast');
 
   if (btnCopy && emailText && toast) {
     btnCopy.addEventListener('click', () => {
       const email = emailText.textContent.trim();
       
-      function showToast() {
-        toast.classList.add('show');
-        setTimeout(() => {
-          toast.classList.remove('show');
-        }, 3000);
-      }
-      
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(email).then(() => {
-          showToast();
+          showToastNotification('Email copied to clipboard!');
         }).catch(err => {
           console.error('Failed to copy text (clipboard API): ', err);
           fallbackCopy(email);
@@ -140,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const successful = document.execCommand('copy');
           document.body.removeChild(textArea);
           if (successful) {
-            showToast();
+            showToastNotification('Email copied to clipboard!');
           } else {
             console.error('Fallback copy command was unsuccessful');
           }
@@ -204,17 +214,13 @@ document.addEventListener('DOMContentLoaded', () => {
       };
       requestAnimationFrame(animateCursor);
       
-      // Bind hover state on links/buttons
-      const interactiveElements = document.querySelectorAll(
-        'a, button, .btn, .logo, .social-icon-link, .email-copy-box, .skill-badge, .filter-btn'
-      );
-      interactiveElements.forEach(el => {
-        el.addEventListener('mouseenter', () => {
+      // Bind hover state on links/buttons using event delegation
+      document.addEventListener('mouseover', e => {
+        if (e.target.closest('a, button, .btn, .logo, .social-icon-link, .email-copy-box, .skill-badge, .filter-btn')) {
           document.body.classList.add('cursor-hovered');
-        });
-        el.addEventListener('mouseleave', () => {
+        } else {
           document.body.classList.remove('cursor-hovered');
-        });
+        }
       });
     }
   }
@@ -246,22 +252,27 @@ document.addEventListener('DOMContentLoaded', () => {
         projectCards.forEach(card => {
           const cardCategory = card.getAttribute('data-category');
           
+          // Clear any active filter timeouts on this card to prevent overlapping transitions
+          if (card.dataset.filterTimeout) {
+            clearTimeout(parseInt(card.dataset.filterTimeout, 10));
+            card.removeAttribute('data-filter-timeout');
+          }
+          
           if (filterValue === 'all' || cardCategory === filterValue) {
-            // First show the element if it was display none
             card.classList.remove('hidden');
-            // Trigger reflow to let the transition animate
+            // Force reflow
             void card.offsetWidth;
             card.classList.remove('fade-out');
           } else {
-            // Fade out first
             card.classList.add('fade-out');
-            // Hide display once animation finishes
-            card.addEventListener('transitionend', function hideCard(e) {
-              if (e.propertyName === 'opacity' && card.classList.contains('fade-out')) {
-                card.classList.add('hidden');
-                card.removeEventListener('transitionend', hideCard);
-              }
-            });
+            
+            // Wait for 400ms transition to complete before setting display: none
+            const timeoutId = setTimeout(() => {
+              card.classList.add('hidden');
+              card.removeAttribute('data-filter-timeout');
+            }, 400);
+            
+            card.dataset.filterTimeout = timeoutId.toString();
           }
         });
       });
@@ -318,24 +329,13 @@ document.addEventListener('DOMContentLoaded', () => {
         jsonObject[key] = value;
       });
       
-      // If Web3Forms placeholder key is present, alert user or run fallback
+      // If Web3Forms placeholder key is present, run fallback in simulated mode
       if (jsonObject['access_key'] === 'YOUR_ACCESS_KEY_HERE') {
         setTimeout(() => {
-          alert('Message sent successfully! (Note: Replace placeholder Web3Forms API Key with your own in index.html to get real emails).');
+          showToastNotification('Message sent! (Simulated Mode - Set API Key in HTML)');
           if (submitText) submitText.textContent = originalText;
           btnSubmit.disabled = false;
           contactForm.reset();
-          
-          // Trigger copy email toast as a simulated success alert
-          const toast = document.getElementById('toast');
-          if (toast) {
-            toast.textContent = 'Message sent! (Simulated Mode)';
-            toast.classList.add('show');
-            setTimeout(() => {
-              toast.classList.remove('show');
-              toast.textContent = 'Email copied to clipboard!';
-            }, 3000);
-          }
         }, 1000);
         return;
       }
@@ -352,26 +352,16 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(async response => {
         let json = await response.json();
         if (response.status === 200) {
-          // Success
           contactForm.reset();
-          const toast = document.getElementById('toast');
-          if (toast) {
-            toast.textContent = 'Message sent successfully!';
-            toast.classList.add('show');
-            setTimeout(() => {
-              toast.classList.remove('show');
-              toast.textContent = 'Email copied to clipboard!';
-            }, 3000);
-          }
+          showToastNotification('Message sent successfully!');
         } else {
-          // Error response
           console.error(json);
-          alert('Submission failed: ' + (json.message || 'Unknown error'));
+          showToastNotification('Submission failed: ' + (json.message || 'Error'));
         }
       })
       .catch(error => {
         console.error(error);
-        alert('An error occurred during submission.');
+        showToastNotification('An error occurred during submission.');
       })
       .finally(() => {
         if (submitText) submitText.textContent = originalText;
