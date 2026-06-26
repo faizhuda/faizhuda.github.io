@@ -643,7 +643,7 @@ h3.timeline-title {
 
 /* Contact Section */
 .contact-container {
-  max-width: 700px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -670,7 +670,7 @@ h3.timeline-title {
   border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 6px 6px 6px 16px;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
   max-width: 100%;
   transition: var(--transition-smooth);
 }
@@ -719,6 +719,12 @@ h3.timeline-title {
 }
 
 /* Social Grid */
+.socials-wrapper {
+  margin-top: 36px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 32px;
+}
+
 .socials-title {
   font-size: 0.85rem;
   text-transform: uppercase;
@@ -1065,7 +1071,7 @@ h3.timeline-title {
 /* Contact Form */
 .contact-form {
   width: 100%;
-  margin-top: 35px;
+  margin-top: 10px;
   text-align: left;
 }
 

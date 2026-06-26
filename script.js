@@ -287,8 +287,15 @@ document.addEventListener('DOMContentLoaded', () => {
   
   if (btnCv && cvModal && cvModalClose && cvModalBackdrop) {
     const openModal = () => {
-      cvModal.classList.add('active');
-      document.body.classList.add('scroll-lock');
+      // Check if mobile or touch device (where iframe PDF viewer doesn't scroll/render properly)
+      const isTouchOrMobile = window.matchMedia('(max-width: 768px)').matches || ('ontouchstart' in window);
+      
+      if (isTouchOrMobile) {
+        window.open('cv_faiz_naufal_huda.pdf', '_blank');
+      } else {
+        cvModal.classList.add('active');
+        document.body.classList.add('scroll-lock');
+      }
     };
     
     const closeModal = () => {
