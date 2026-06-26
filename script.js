@@ -234,41 +234,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- CV PREVIEW MODAL ---
-  const btnCv = document.getElementById('btn-cv');
-  const cvModal = document.getElementById('cv-modal');
-  const cvModalClose = document.getElementById('cv-modal-close');
-  const cvModalBackdrop = document.getElementById('cv-modal-backdrop');
-  
-  if (btnCv && cvModal && cvModalClose && cvModalBackdrop) {
-    const openModal = () => {
-      // Check if mobile or touch device (where iframe PDF viewer doesn't scroll/render properly)
-      const isTouchOrMobile = window.matchMedia('(max-width: 768px)').matches || ('ontouchstart' in window);
-      
-      if (isTouchOrMobile) {
-        window.open('cv_faiz_naufal_huda.pdf', '_blank');
-      } else {
-        cvModal.classList.add('active');
-        document.body.classList.add('scroll-lock');
-      }
-    };
-    
-    const closeModal = () => {
-      cvModal.classList.remove('active');
-      document.body.classList.remove('scroll-lock');
-    };
-    
-    btnCv.addEventListener('click', openModal);
-    cvModalClose.addEventListener('click', closeModal);
-    cvModalBackdrop.addEventListener('click', closeModal);
-    
-    // Close on Escape key press
-    window.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && cvModal.classList.contains('active')) {
-        closeModal();
-      }
-    });
-  }
 
   // --- CONTACT FORM SUBMISSION ---
   const contactForm = document.getElementById('contact-form');
