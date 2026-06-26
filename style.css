@@ -944,59 +944,6 @@ h3.timeline-title {
   }
 }
 
-/* Custom Cursor */
-@media (hover: hover) and (pointer: fine) {
-  .custom-cursor-dot,
-  .custom-cursor-outline {
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.15s ease, width 0.3s ease, height 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
-  }
-  
-  .custom-cursor-dot {
-    width: 6px;
-    height: 6px;
-    background-color: var(--text-primary);
-  }
-  
-  .custom-cursor-outline {
-    width: 32px;
-    height: 32px;
-    border: 1.5px solid rgba(255, 255, 255, 0.4);
-  }
-  
-  body:hover .custom-cursor-dot,
-  body:hover .custom-cursor-outline {
-    opacity: 1;
-  }
-  
-  /* Cursor state when hovering over links/buttons */
-  body.cursor-hovered .custom-cursor-dot {
-    transform: translate(-50%, -50%) scale(0);
-    opacity: 0;
-  }
-  
-  body.cursor-hovered .custom-cursor-outline {
-    width: 48px;
-    height: 48px;
-    background-color: rgba(255, 255, 255, 0.08);
-    border-color: var(--text-primary);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-  }
-}
-
-/* Hide default cursor on desktop when custom cursor is active */
-@media (hover: hover) and (pointer: fine) {
-  body, a, button, .btn, .nav-link, .logo, .social-icon-link, .email-copy-box, .skill-badge {
-    cursor: none !important;
-  }
-}
 
 /* Scroll Progress Bar */
 .scroll-progress-container {

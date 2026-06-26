@@ -179,51 +179,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   });
 
-  // --- CUSTOM CURSOR ---
-  const cursorDot = document.querySelector('.custom-cursor-dot');
-  const cursorOutline = document.querySelector('.custom-cursor-outline');
-  
-  if (cursorDot && cursorOutline) {
-    let mouseX = 0;
-    let mouseY = 0;
-    let outlineX = 0;
-    let outlineY = 0;
-    
-    // Check if device supports hover (is it a desktop/laptop with a mouse?)
-    const hasHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-    
-    if (hasHover) {
-      window.addEventListener('mousemove', e => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        
-        // Instant position for the inner dot
-        cursorDot.style.left = `${mouseX}px`;
-        cursorDot.style.top = `${mouseY}px`;
-      }, { passive: true });
-      
-      // Animation loop for smooth lag effect on outer outline
-      const animateCursor = () => {
-        outlineX += (mouseX - outlineX) * 0.15;
-        outlineY += (mouseY - outlineY) * 0.15;
-        
-        cursorOutline.style.left = `${outlineX}px`;
-        cursorOutline.style.top = `${outlineY}px`;
-        
-        requestAnimationFrame(animateCursor);
-      };
-      requestAnimationFrame(animateCursor);
-      
-      // Bind hover state on links/buttons using event delegation
-      document.addEventListener('mouseover', e => {
-        if (e.target.closest('a, button, .btn, .logo, .social-icon-link, .email-copy-box, .skill-badge, .filter-btn')) {
-          document.body.classList.add('cursor-hovered');
-        } else {
-          document.body.classList.remove('cursor-hovered');
-        }
-      });
-    }
-  }
 
   // --- SCROLL PROGRESS BAR ---
   const scrollBar = document.getElementById('scroll-bar');
