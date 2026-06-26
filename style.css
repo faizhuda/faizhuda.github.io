@@ -220,7 +220,8 @@ a {
   transition: var(--transition-smooth);
 }
 
-.glass-card:hover {
+.glass-card:hover,
+.glass-card.hovered {
   border-color: var(--glass-border-hover);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
@@ -250,7 +251,8 @@ a {
   border: 1px solid var(--text-primary);
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary.hovered {
   background-color: transparent;
   color: var(--text-primary);
 }
@@ -261,13 +263,21 @@ a {
   border: 1px solid var(--border-color);
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover,
+.btn-secondary.hovered {
   border-color: var(--text-primary);
 }
 
 .btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.btn:active,
+.social-icon-link:active,
+.btn-copy:active,
+.skill-badge:active {
+  transform: scale(0.96) !important;
 }
 
 /* Hero Section */
@@ -396,7 +406,8 @@ a {
   transition: var(--transition-slow);
 }
 
-.hero-image-wrapper:hover .hero-img {
+.hero-image-wrapper:hover .hero-img,
+.hero-image-wrapper.hovered .hero-img {
   filter: grayscale(0%) contrast(1) brightness(1);
   transform: scale(1.4);
   transform-origin: center 25%;
@@ -521,7 +532,8 @@ h3.timeline-title {
   transition: var(--transition-smooth);
 }
 
-.skill-badge:hover {
+.skill-badge:hover,
+.skill-badge.hovered {
   border-color: var(--text-primary);
   color: var(--text-primary);
   background-color: var(--bg-tertiary);
@@ -662,7 +674,8 @@ h3.timeline-title {
   transition: var(--transition-smooth);
 }
 
-.email-copy-box:hover {
+.email-copy-box:hover,
+.email-copy-box.hovered {
   border-color: var(--border-hover);
 }
 
@@ -697,7 +710,8 @@ h3.timeline-title {
   transition: var(--transition-smooth);
 }
 
-.btn-copy:hover {
+.btn-copy:hover,
+.btn-copy.hovered {
   background-color: var(--text-primary);
   color: var(--bg-primary);
   border-color: var(--text-primary);
@@ -732,7 +746,8 @@ h3.timeline-title {
   transition: var(--transition-smooth);
 }
 
-.social-icon-link:hover {
+.social-icon-link:hover,
+.social-icon-link.hovered {
   border-color: var(--text-primary);
   color: var(--text-primary);
   transform: translateY(-3px);

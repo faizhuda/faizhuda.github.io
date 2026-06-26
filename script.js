@@ -151,6 +151,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // --- TOUCH HOLD SIMULATOR FOR MOBILE ---
+  const touchInteractiveElements = document.querySelectorAll(
+    '.hero-image-wrapper, .glass-card, .btn, .social-icon-link, .btn-copy, .skill-badge, .email-copy-box'
+  );
+  touchInteractiveElements.forEach(el => {
+    el.addEventListener('touchstart', () => {
+      el.classList.add('hovered');
+    }, { passive: true });
+    
+    el.addEventListener('touchend', () => {
+      el.classList.remove('hovered');
+    }, { passive: true });
+    
+    el.addEventListener('touchcancel', () => {
+      el.classList.remove('hovered');
+    }, { passive: true });
+  });
+
   // --- DYNAMIC YEAR UPDATE ---
   const currentYearSpan = document.getElementById('current-year');
   if (currentYearSpan) {
