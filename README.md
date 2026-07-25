@@ -1,7 +1,7 @@
-# Faiz Naufal Huda — Portfolio Website
+# Faiz Naufal Huda: Portfolio Website
 
 Source for [faizhuda.github.io](https://faizhuda.github.io), a single-page portfolio built with
-vanilla HTML, CSS, and JavaScript. No framework, no build step, no dependencies — the repository
+vanilla HTML, CSS, and JavaScript. No framework, no build step, no dependencies: the repository
 is deployed to GitHub Pages exactly as it is committed.
 
 ---
@@ -13,7 +13,8 @@ is deployed to GitHub Pages exactly as it is committed.
 | `index.html` | Entire page markup, meta/SEO tags, JSON-LD structured data |
 | `style.css` | Design system, layout, responsive rules, reduced-motion overrides |
 | `script.js` | Nav drawer, typewriter, scroll reveal, project filters, contact form |
-| `cv_faiz_naufal_huda.typ` | CV source (Typst) — the file to edit |
+| `cv_faiz_naufal_huda.typ` | CV entry point (Typst): page setup and header only |
+| `cv_body.typ` | CV content (Summary through Certifications), included by the entry file |
 | `cv_faiz_naufal_huda.pdf` | Compiled CV, linked from the site's "View CV" button |
 | `robots.txt`, `sitemap.xml` | Crawler directives |
 
@@ -21,7 +22,7 @@ is deployed to GitHub Pages exactly as it is committed.
 
 ## Design
 
-**Obsidian Noir** — a monochrome dark theme.
+**Obsidian Noir**, a monochrome dark theme.
 
 - Palette driven by CSS custom properties in `:root`: near-black background (`#050505`),
   charcoal cards (`#0d0d0d`), white headings, slate-gray body text.
@@ -68,18 +69,24 @@ are declared as meta tags in `index.html`:
 
 The grid links to the repositories behind each project:
 
-1. **MyToko** — customer + admin e-commerce platform. Placed 2nd at AgritechJam
+1. **MyToko**: customer + admin e-commerce platform. Placed 2nd at AgritechJam
    (Agriinformatics 2025). Next.js, TypeScript, Supabase, with PostgreSQL stored procedures
    for atomic order cancellation.
-2. **AQI Bangladesh** — end-to-end air quality prediction across 30 cities. LightGBM on 1M+
+2. **AQI Bangladesh**: end-to-end air quality prediction across 30 cities. LightGBM on 1M+
    rows (MAE 1.13, R² 0.9986), 40 unit tests, GitHub Actions CI/CD, Docker.
-3. **AgriDesk** — full-stack academic document management system on Clean Architecture, DDD,
+3. **AgriDesk**: full-stack academic document management system on Clean Architecture, DDD,
    and finite-state document workflows. SHA-256 hashing with QR verification, 118 tests.
-4. **LTI Incident Risk Prediction** — BNSP Associate Data Scientist certification project
+4. **Produce Freshness Classification**: classical ML vs. MobileNetV2 CNN across 11 experiment
+   scenarios, 98.70% best accuracy with paired significance testing, 66 pytest unit tests.
+5. **Loan Approval Prediction**: Optuna-tuned LightGBM + XGBoost + CatBoost ensemble for a
+   Kaggle competition, 0.9325 out-of-fold AUC.
+6. **LTI Incident Risk Prediction**: BNSP Associate Data Scientist certification project
    classifying Lost Time Injury risk from 2,699 SHE incident records.
-5. **Infrastructure Monitoring** — Prometheus, Grafana, and Alertmanager with Telegram
+7. **Infrastructure Monitoring**: Prometheus, Grafana, and Alertmanager with Telegram
    alerting over a simulated DC-DRC failover environment.
-6. **This portfolio.**
+8. **Jauhar Urban Farming**: solo-built, zero-JS marketing site for a real urban farming
+   business. Astro, Tailwind CSS, self-hosted fonts, JSON-LD structured data.
+9. **This portfolio.**
 
 ---
 
@@ -91,7 +98,7 @@ The site is static, so any static file server works:
 npx serve .
 ```
 
-Opening `index.html` directly via `file://` also mostly works, but a server is preferable —
+Opening `index.html` directly via `file://` also mostly works, but a server is preferable:
 the CSP and fetch-based contact form behave as they do in production.
 
 ## Rebuilding the CV

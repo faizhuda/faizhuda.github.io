@@ -62,7 +62,7 @@ Actively seeking a software engineering or ML engineering internship.
 - Engineered modular pipeline with centralized YAML config, lag features, rolling windows, cyclical time encoding, and walk-forward cross-validation (3-fold) for time-aware evaluation; experiment tracking via CSV logging.
 - Implemented 40 unit tests across 6 modules (pytest + coverage); CI/CD via GitHub Actions with black/flake8 enforcement and pre-commit hooks; containerized with Docker for reproducible deployment.
 
-#v(5pt)
+#v(3pt)
 #row(
   [*AgriDesk: Academic Document Management System* #h(6pt) #text(size: 9pt)[(#link("https://github.com/faizhuda/ads-agridesk")[github.com/faizhuda/ads-agridesk])]],
   [Jan -- Jun 2026],
@@ -72,7 +72,26 @@ Actively seeking a software engineering or ML engineering internship.
 - Implemented SHA-256 document hashing with QR code verification enabling third-party authentication without system login; PDF generation (ReportLab + PyPDF) with coordinate-based digital signature stamping.
 - Achieved 100% test coverage on core services across 118 passing tests; JWT + bcrypt authentication; in-memory SQLite for isolated unit testing.
 
-#v(5pt)
+#v(3pt)
+#row(
+  [*Fruit & Vegetable Freshness Classification* #h(6pt) #text(size: 9pt)[(#link("https://github.com/faizhuda/produce-freshness-classifier")[github.com/faizhuda/produce-freshness-classifier])]],
+  [May -- Jun 2026],
+)
+#v(2pt)
+- Independently designed and executed 11 experiment scenarios comparing classical ML (SVM, Random Forest) against a MobileNetV2 CNN for binary fresh/rotten produce classification across 4,391 test images; best CNN scenario reached 98.70% accuracy, a statistically significant improvement over the best classical model (87.34% via SVM, p < 0.001).
+- Used paired significance testing to catch a counterintuitive result: a CNN on raw unprocessed images significantly outperformed the same CNN behind a full image-restoration and segmentation pipeline (98.70% vs. 97.22%, p < 0.001).
+- Built with 66 pytest unit tests, GitHub Actions CI, and ruff linting; pipeline logic kept side-effect-free and decoupled from Kaggle-specific orchestration for reproducibility.
+
+#v(3pt)
+#row(
+  [*Loan Approval Prediction: Kaggle Competition* #h(6pt) #text(size: 9pt)[(#link("https://github.com/faizhuda/loan-approval-prediction")[github.com/faizhuda/loan-approval-prediction])]],
+  [Jun 2026],
+)
+#v(2pt)
+- Built an Optuna-tuned ensemble (LightGBM + XGBoost + CatBoost, 135 total trials) for a binary loan-default Kaggle competition, rank-blending the three models to 0.9325 out-of-fold AUC (StratifiedKFold, 5-fold).
+- Iterated on feature engineering empirically rather than by intuition: reverted class weighting and most derived features after measuring they reduced OOF AUC, keeping only the one interaction term that measurably helped.
+
+#v(3pt)
 #row(
   [*AgritechJam, Agriinformatics 2025 (MyToko)* #h(6pt) #text(size: 9pt)[(#link("https://github.com/faizhuda/agritechjam-mytoko")[github.com/faizhuda/agritechjam-mytoko])]],
   [Oct -- Nov 2025],
@@ -95,7 +114,7 @@ Actively seeking a software engineering or ML engineering internship.
 - Built *PriorMail* as capstone: an email intelligence system with DistilBERT fine-tuning for 4-class priority classification; designed phishing detection module with security-focused adversarial evaluation protocol.
 - Earned dual certificates from IBM SkillsBuild and Dicoding upon module completion.
 
-#v(5pt)
+#v(3pt)
 #row(
   [*Head of Funding & Consumption Division* #linebreak() IT TODAY, HIMALKOM IPB University],
   [Apr 2025 -- Dec 2025],
@@ -104,7 +123,7 @@ Actively seeking a software engineering or ML engineering internship.
 - Managed IDR 33 million F&B consumption budget covering meals, snacks, and catering for 500+ participants and 90+ committee members across the full IT TODAY event series.
 - Secured IDR 5 million in internal operational funding through entrepreneurial methods to support division activities.
 
-#v(5pt)
+#v(3pt)
 #row(
   [*Treasurer, Welfare & Internal Harmony Division* #linebreak() HIMALKOM IPB University],
   [Jan 2025 -- Dec 2025],
@@ -113,7 +132,7 @@ Actively seeking a software engineering or ML engineering internship.
 - Managed annual divisional budget of \~IDR 15--20 million across 2--3 major programs, achieving 100% budget absorption with zero deficit, reflecting accurate planning and real-time expenditure tracking.
 - Oversaw 20--30 financial transactions per program cycle; handled reimbursements and documentation with full accountability and transparent reporting.
 
-#v(5pt)
+#v(3pt)
 #row(
   [*Teaching Volunteer* #linebreak() LPK Tepi Sawah, HIMALKOM IPB University],
   [Feb 2025 -- Nov 2025],

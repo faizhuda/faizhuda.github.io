@@ -1,6 +1,6 @@
-#set page(paper: "a4", margin: (x: 0.7in, y: 0.7in))
-#set text(font: "New Computer Modern", size: 10pt)
-#set par(leading: 0.55em, justify: false)
+#set page(paper: "a4", margin: (x: 0.62in, y: 0.55in))
+#set text(font: "New Computer Modern", size: 9.8pt)
+#set par(leading: 0.5em, justify: false)
 #show link: set text(fill: black)
 #set list(indent: 0.5em, body-indent: 0.8em)
 

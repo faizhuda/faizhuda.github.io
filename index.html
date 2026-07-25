@@ -367,7 +367,51 @@
                     </a>
                 </div>
 
-                <!-- Project 4: Bananacoal -->
+                <!-- Project 4: Produce Freshness Classifier -->
+                <div class="glass-card project-card fade-up-element" id="project-produce-freshness" data-category="ml-data">
+                    <div class="project-header">
+                        <h3 class="project-title">Produce Freshness Classification</h3>
+                        <p class="project-tag">Computer Vision</p>
+                    </div>
+                    <p class="project-desc">
+                        Independently ran 11 experiment scenarios comparing classical ML (SVM, Random Forest) against a MobileNetV2 CNN for fresh/rotten produce classification. Best CNN scenario reached 98.70% accuracy (vs. 87.34% for the best classical model, p &lt; 0.001); paired significance testing caught a counterintuitive result along the way, since raw images beat the full restoration + segmentation pipeline. Backed by 66 pytest unit tests and GitHub Actions CI.
+                    </p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>TensorFlow/Keras</span>
+                        <span>Scikit-learn</span>
+                        <span>Pytest</span>
+                        <span>GitHub Actions</span>
+                    </div>
+                    <a href="https://github.com/faizhuda/produce-freshness-classifier" target="_blank" rel="noopener noreferrer" class="project-link">
+                        View Repository
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+
+                <!-- Project 5: Loan Approval Prediction -->
+                <div class="glass-card project-card fade-up-element" id="project-loan-approval" data-category="ml-data">
+                    <div class="project-header">
+                        <h3 class="project-title">Loan Approval Prediction</h3>
+                        <p class="project-tag">Kaggle Competition</p>
+                    </div>
+                    <p class="project-desc">
+                        Built an Optuna-tuned ensemble of LightGBM, XGBoost, and CatBoost for a binary loan-default Kaggle competition, rank-blending the three models to 0.9325 out-of-fold AUC (StratifiedKFold, 5-fold). Feature engineering was driven by measurement, not intuition: class weighting and most derived features were reverted after they measurably reduced OOF AUC.
+                    </p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>LightGBM</span>
+                        <span>XGBoost</span>
+                        <span>CatBoost</span>
+                        <span>Optuna</span>
+                    </div>
+                    <a href="https://github.com/faizhuda/loan-approval-prediction" target="_blank" rel="noopener noreferrer" class="project-link">
+                        View Repository
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+
+                <!-- Project 6: LTI Incident Risk Prediction -->
                 <div class="glass-card project-card fade-up-element" id="project-bananacoal" data-category="ml-data">
                     <div class="project-header">
                         <h3 class="project-title">LTI Incident Risk Prediction</h3>
@@ -388,7 +432,7 @@
                     </a>
                 </div>
 
-                <!-- Project 5: Infrastructure Monitoring -->
+                <!-- Project 7: Infrastructure Monitoring -->
                 <div class="glass-card project-card fade-up-element" id="project-monitoring" data-category="devops-cloud">
                     <div class="project-header">
                         <h3 class="project-title">Infrastructure Monitoring System</h3>
@@ -410,7 +454,29 @@
                     </a>
                 </div>
 
-                <!-- Project 6: Portfolio -->
+                <!-- Project 8: Jauhar Urban Farming -->
+                <div class="glass-card project-card fade-up-element" id="project-jauhar" data-category="full-stack">
+                    <div class="project-header">
+                        <h3 class="project-title">Jauhar Urban Farming</h3>
+                        <p class="project-tag">Client Website · Live</p>
+                    </div>
+                    <p class="project-desc">
+                        Solo-built marketing site for a real urban farming business: digital profile, product catalog, and WhatsApp ordering. Fully static and zero-JS by default, with self-hosted fonts (no third-party font requests), JSON-LD structured data, and a scroll-reveal design system that respects prefers-reduced-motion.
+                    </p>
+                    <div class="project-tags">
+                        <span>Astro</span>
+                        <span>Tailwind CSS</span>
+                        <span>TypeScript</span>
+                        <span>Zod</span>
+                        <span>Vercel</span>
+                    </div>
+                    <a href="https://github.com/faizhuda/jauhar-urban-farming" target="_blank" rel="noopener noreferrer" class="project-link">
+                        View Repository
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+
+                <!-- Project 9: Portfolio -->
                 <div class="glass-card project-card fade-up-element" id="project-portfolio-website" data-category="full-stack">
                     <div class="project-header">
                         <h3 class="project-title">Obsidian Noir Portfolio</h3>
