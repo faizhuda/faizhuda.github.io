@@ -6,11 +6,15 @@
 
 // ── Helpers ─────────────────────────────────────────────────────────────────
 
+// sticky: true keeps a section heading glued to the entry that follows it, so a
+// heading can never be left stranded alone at the bottom of a page.
 #let section(title) = {
   v(7pt)
-  text(size: 11pt, weight: "bold")[#title]
-  v(-3pt)
-  line(length: 100%, stroke: 0.5pt)
+  block(sticky: true)[
+    #text(size: 11pt, weight: "bold")[#title]
+    #v(-3pt)
+    #line(length: 100%, stroke: 0.5pt)
+  ]
   v(4pt)
 }
 
