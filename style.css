@@ -1097,6 +1097,10 @@ h3.timeline-title {
   display: none !important;
 }
 
+.icon-inline {
+  vertical-align: middle;
+}
+
 @media (max-width: 768px) {
   .contact-grid {
     grid-template-columns: 1fr;

@@ -31,8 +31,6 @@
   #v(1pt)
   #link("mailto:faiznaufal2015@gmail.com")[faiznaufal2015\@gmail.com]
   #h(5pt)·#h(5pt)
-  +62 877-8712-8257
-  #h(5pt)·#h(5pt)
   #link("https://linkedin.com/in/faizhuda")[linkedin.com/in/faizhuda]
   #h(5pt)·#h(5pt)
   #link("https://github.com/faizhuda")[github.com/faizhuda]
