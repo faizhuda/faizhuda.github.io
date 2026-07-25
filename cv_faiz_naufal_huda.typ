@@ -45,7 +45,7 @@
 // ── Summary ─────────────────────────────────────────────────────────────────
 
 #section("Summary")
-Computer Science undergraduate at IPB University (GPA: 3.82/4.00) with hands-on experience
+Computer Science undergraduate at IPB University (GPA: 3.85/4.00) with hands-on experience
 building complete, well-tested systems end-to-end, from a full-stack academic document management
 system (118 tests, Clean Architecture) to an award-winning hackathon e-commerce platform and
 ML pipelines with CI/CD, Docker, and transformer fine-tuning. Selected participant in the
@@ -143,7 +143,7 @@ Pijak × IBM SkillsBuild AI Engineer Cohort. Fluent in English (TOEFL ITP 607).
 
 #section("Education")
 #row(
-  [*IPB University* #linebreak() Bachelor of Computer Science #linebreak() GPA: 3.82 / 4.00],
+  [*IPB University* #linebreak() Bachelor of Computer Science #linebreak() GPA: 3.85 / 4.00],
   [Jul 2023 -- Oct 2027 (Expected)],
 )
 
