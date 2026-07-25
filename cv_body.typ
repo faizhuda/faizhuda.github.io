@@ -54,7 +54,7 @@ Actively seeking a software engineering or ML engineering internship.
 #section("Projects")
 
 #row(
-  [*AQI Bangladesh: Air Quality Prediction* #h(6pt) #text(size: 9pt)[(#link("https://github.com/faizhuda/daming-kelompok-7")[github.com/faizhuda/daming-kelompok-7])]],
+  [*AQI Bangladesh: Air Quality Prediction* #h(6pt) #text(size: 9pt)[(#link("https://github.com/faizhuda/aqi-bangladesh-prediction")[github.com/faizhuda/aqi-bangladesh-prediction])]],
   [Apr -- Jun 2026],
 )
 #v(2pt)
