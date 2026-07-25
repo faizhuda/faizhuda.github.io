@@ -46,8 +46,8 @@
 Computer Science undergraduate at IPB University (GPA: 3.85/4.00) with hands-on experience
 building complete, well-tested systems end-to-end, from a full-stack academic document management
 system (118 tests, Clean Architecture) to an award-winning hackathon e-commerce platform and
-ML pipelines with CI/CD, Docker, and transformer fine-tuning. Selected participant in the
-Pijak × IBM SkillsBuild AI Engineer Cohort. Fluent in English (TOEFL ITP 607).
+ML pipelines with CI/CD, Docker, and transformer fine-tuning. Completed the
+Pijak × IBM SkillsBuild AI Engineer Cohort as a selected participant. Fluent in English (TOEFL ITP 607).
 
 // ── Technical Skills ────────────────────────────────────────────────────────
 
@@ -70,7 +70,7 @@ Pijak × IBM SkillsBuild AI Engineer Cohort. Fluent in English (TOEFL ITP 607).
 
 #row(
   [*AI Engineer Cohort (Selected Participant)* #linebreak() Pijak × IBM SkillsBuild (Dicoding Indonesia)],
-  [Jan 2026 -- Present],
+  [Jan -- Jul 2026],
 )
 #v(2pt)
 - Completed structured learning path covering Python, supervised/unsupervised ML, deep learning (CNN & RNN), experiment tracking (MLflow), and production ML deployment via IBM SkillsBuild and Dicoding's industry curriculum.
@@ -148,8 +148,8 @@ Pijak × IBM SkillsBuild AI Engineer Cohort. Fluent in English (TOEFL ITP 607).
 // ── Certifications ───────────────────────────────────────────────────────────
 
 #section("Certifications")
-- *AI Engineer Cohort*, IBM SkillsBuild + Dicoding Indonesia #h(1fr) Jan 2026 -- Present
-- *Associate Data Scientist*, BNSP (Badan Nasional Sertifikasi Profesi) #h(1fr) Jun 2026
+- *AI Engineer Cohort*, IBM SkillsBuild + Dicoding Indonesia #h(1fr) Jan -- Jul 2026
+- *Associate Data Scientist*, BNSP (Badan Nasional Sertifikasi Profesi) #h(1fr) Jul 2026
 - *Belajar Fundamental Deep Learning*, Dicoding Indonesia #h(1fr) May 2026
 - *Belajar Machine Learning untuk Pemula*, Dicoding Indonesia #h(1fr) Mar 2026
 - *Python for Data Science and ML Essential Training (Part 1 & 2)*, LinkedIn Learning #h(1fr) Feb 2026
