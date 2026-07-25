@@ -28,8 +28,9 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Faiz Naufal Huda Portfolio">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
+    <!-- Twitter Card (summary, not summary_large_image: the profile photo is portrait 3:4
+         and would be center-cropped badly in the 1.91:1 large-image frame) -->
+    <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Faiz Naufal Huda | ML Engineer & Full-Stack Developer">
     <meta name="twitter:description" content="Computer Science student at IPB University (GPA 3.85) building end-to-end ML systems, full-stack applications, and CI/CD pipelines.">
     <meta name="twitter:image" content="https://faizhuda.github.io/image/profile.png">
@@ -44,14 +45,22 @@
       "url": "https://faizhuda.github.io",
       "image": "https://faizhuda.github.io/image/profile.png",
       "jobTitle": "Computer Science Student",
-      "worksFor": {
-        "@type": "EducationalOrganization",
-        "name": "IPB University"
-      },
+      "description": "Computer Science undergraduate at IPB University building end-to-end ML systems, full-stack applications, and CI/CD pipelines.",
+      "email": "mailto:faiznaufal2015@gmail.com",
       "alumniOf": {
-        "@type": "EducationalOrganization",
-        "name": "IPB University"
+        "@type": "CollegeOrUniversity",
+        "name": "IPB University",
+        "url": "https://www.ipb.ac.id/"
       },
+      "homeLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bogor",
+          "addressCountry": "ID"
+        }
+      },
+      "knowsLanguage": ["id", "en"],
       "knowsAbout": ["Machine Learning", "Full-Stack Development", "DevOps", "Python", "React", "FastAPI", "Docker"],
       "sameAs": [
         "https://www.linkedin.com/in/faizhuda",
@@ -65,16 +74,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="image/Logo IPB.ico">
-    
+    <!-- Favicon & theme -->
+    <link rel="icon" type="image/x-icon" href="image/favicon.ico">
+    <link rel="apple-touch-icon" href="image/profile.png">
+    <meta name="theme-color" content="#050505">
+    <meta name="color-scheme" content="dark">
+
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css?v=29">
+    <link rel="stylesheet" href="style.css?v=30">
 </head>
 <body>
 
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Sticky Navigation -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar" aria-label="Main navigation">
         <div class="scroll-progress-container">
             <div class="scroll-progress-bar" id="scroll-bar"></div>
         </div>
@@ -83,7 +97,7 @@
                 faizhuda
             </a>
             
-            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -99,6 +113,8 @@
         </div>
     </nav>
 
+    <main id="main-content">
+
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container hero-grid">
@@ -106,7 +122,8 @@
                 <p class="hero-tagline">Welcome to my space</p>
                 <h1 class="hero-title">
                     Hi, I'm Faiz Huda
-                    <span class="typewriter-text" id="typewriter">Computer Science Student</span>
+                    <span class="sr-only">ML Engineer and Full-Stack Developer</span>
+                    <span class="typewriter-text" id="typewriter" aria-hidden="true">Computer Science Student</span>
                 </h1>
                 <p class="hero-description">
                     A Computer Science undergraduate at IPB University (GPA 3.85) building end-to-end ML systems, full-stack applications, and CI/CD pipelines, from 1M-row LightGBM models to award-winning hackathon platforms.
@@ -143,7 +160,7 @@
                         I am a Computer Science undergraduate at <strong>IPB University (Institut Pertanian Bogor)</strong>, Batch 60, with a GPA of 3.85/4.00. I build end-to-end systems, from machine learning pipelines to full-stack web applications.
                     </p>
                     <p>
-                        My work spans <strong>ML engineering</strong> (LightGBM, PyTorch, Hugging Face Transformers), <strong>full-stack development</strong> (React 18, Next.js, FastAPI, PostgreSQL), and <strong>DevOps</strong> (Docker, GitHub Actions, Prometheus, Grafana). I care about production quality: clean architecture, test coverage, and CI/CD.
+                        My work spans <strong>ML engineering</strong> (LightGBM, XGBoost, Scikit-learn), <strong>full-stack development</strong> (React 18, FastAPI, PostgreSQL), and <strong>CI/CD</strong> (Docker, GitHub Actions, pytest). I care about the fundamentals: clean architecture, test coverage, and reproducible pipelines. I've also worked with PyTorch, Hugging Face Transformers, Next.js, and Prometheus/Grafana on individual projects.
                     </p>
                     <p>
                         I completed the <strong>Pijak × IBM SkillsBuild AI Engineer Cohort</strong> as a selected participant and hold a TOEFL ITP score of 607. I'm actively seeking internship opportunities in software engineering or ML engineering.
@@ -228,9 +245,11 @@
                     <div class="skill-list">
                         <span class="skill-badge">React 18</span>
                         <span class="skill-badge">Tailwind CSS</span>
+                        <span class="skill-badge">Vite</span>
                         <span class="skill-badge">FastAPI</span>
                         <span class="skill-badge">PostgreSQL</span>
                         <span class="skill-badge">SQLAlchemy 2.0</span>
+                        <span class="skill-badge">Alembic</span>
                         <span class="skill-badge">JWT + bcrypt</span>
                     </div>
                     <span class="skill-tier-label">Familiar</span>
@@ -271,11 +290,11 @@
             <p class="section-subtitle fade-up-element">Engineering & ML Showcases</p>
 
             <!-- Project Filters -->
-            <div class="project-filters fade-up-element" id="project-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="ml-data">ML & Data Science</button>
-                <button class="filter-btn" data-filter="full-stack">Full-Stack</button>
-                <button class="filter-btn" data-filter="devops-cloud">DevOps & Cloud</button>
+            <div class="project-filters fade-up-element" id="project-filters" role="group" aria-label="Filter projects by category">
+                <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+                <button type="button" class="filter-btn" data-filter="ml-data" aria-pressed="false">ML &amp; Data Science</button>
+                <button type="button" class="filter-btn" data-filter="full-stack" aria-pressed="false">Full-Stack</button>
+                <button type="button" class="filter-btn" data-filter="devops-cloud" aria-pressed="false">DevOps &amp; Cloud</button>
             </div>
 
             <div class="projects-grid">
@@ -376,7 +395,7 @@
                         <p class="project-tag">DevOps & Observability</p>
                     </div>
                     <p class="project-desc">
-                        Centralized real-time monitoring stack simulating DC–DRC failover environments. Configured Prometheus (15s scrape), custom Grafana dashboards, and Alertmanager with Telegram Bot for automated threshold alerts (CPU/RAM/disk &gt; 80%, node down).
+                        Centralized real-time monitoring stack simulating DC-DRC failover environments. Configured Prometheus (15s scrape), custom Grafana dashboards, and Alertmanager with Telegram Bot for automated threshold alerts (CPU/RAM/disk &gt; 80%, node down).
                     </p>
                     <div class="project-tags">
                         <span>Prometheus</span>
@@ -493,8 +512,10 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Toast Notification -->
-    <div class="toast" id="toast" role="alert" aria-live="assertive">
+    <div class="toast" id="toast" role="status" aria-live="polite">
         Email copied to clipboard!
     </div>
 
@@ -508,6 +529,6 @@
     </footer>
 
     <!-- Custom JS -->
-    <script src="script.js?v=21"></script>
+    <script src="script.js?v=22"></script>
 </body>
 </html>

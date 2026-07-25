@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Users who ask the OS to reduce motion get the end state, not the animation.
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   // --- MOBILE NAV TOGGLE ---
   const menuToggle = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('.nav-menu');
@@ -6,36 +9,44 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.nav-link');
 
   if (menuToggle && navMenu && navbar) {
+    function setMenuOpen(isOpen) {
+      navMenu.classList.toggle('active', isOpen);
+      navbar.classList.toggle('menu-open', isOpen);
+      document.body.classList.toggle('scroll-lock', isOpen);
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    }
+
     menuToggle.addEventListener('click', () => {
-      const isActive = navMenu.classList.toggle('active');
-      navbar.classList.toggle('menu-open');
-      
-      if (isActive) {
-        document.body.classList.add('scroll-lock');
-      } else {
-        document.body.classList.remove('scroll-lock');
-      }
+      setMenuOpen(!navMenu.classList.contains('active'));
     });
 
     // Close menu when clicking link
     navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        navbar.classList.remove('menu-open');
-        document.body.classList.remove('scroll-lock');
-      });
+      link.addEventListener('click', () => setMenuOpen(false));
+    });
+
+    // Close menu on Escape so keyboard users are never trapped behind the drawer
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+        setMenuOpen(false);
+        menuToggle.focus();
+      }
     });
   }
 
   // --- TYPEWRITER EFFECT ---
   const typewriterElement = document.getElementById('typewriter');
-  if (typewriterElement) {
-    const titles = [
-      "ML Engineer",
-      "Full-Stack Developer",
-      "Computer Science Student",
-      "DevOps Enthusiast"
-    ];
+  const titles = [
+    "ML Engineer",
+    "Full-Stack Developer",
+    "Computer Science Student",
+    "DevOps Enthusiast"
+  ];
+
+  if (typewriterElement && prefersReducedMotion) {
+    // Show one title statically instead of cycling through them.
+    typewriterElement.textContent = titles[0];
+  } else if (typewriterElement) {
     let titleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -199,9 +210,13 @@ document.addEventListener('DOMContentLoaded', () => {
     filterButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         // Toggle active button
-        filterButtons.forEach(b => b.classList.remove('active'));
+        filterButtons.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-pressed', 'false');
+        });
         btn.classList.add('active');
-        
+        btn.setAttribute('aria-pressed', 'true');
+
         const filterValue = btn.getAttribute('data-filter');
         
         projectCards.forEach(card => {
