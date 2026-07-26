@@ -29,7 +29,7 @@ Computer Science undergraduate at IPB University (GPA: 3.85/4.00) with hands-on 
 building complete, well-tested systems end-to-end, from a full-stack academic document management
 system (118 tests, Clean Architecture) to an award-winning hackathon e-commerce platform and
 ML pipelines with CI/CD, Docker, and transformer fine-tuning. Completed the
-Pijak × IBM SkillsBuild AI Engineer Cohort as a selected participant. Fluent in English (TOEFL ITP 607).
+Pijak × IBM SkillsBuild AI Engineer Cohort as a selected participant, graduating as Top Graduate. Fluent in English (TOEFL ITP 607).
 Actively seeking a software engineering or ML engineering internship.
 
 // ── Technical Skills ────────────────────────────────────────────────────────
@@ -106,13 +106,13 @@ Actively seeking a software engineering or ML engineering internship.
 #section("Experience")
 
 #row(
-  [*AI Engineer Cohort (Selected Participant)* #linebreak() Pijak × IBM SkillsBuild (Dicoding Indonesia)],
-  [Jan -- Jul 2026],
+  [*AI Engineer Cohort (Top Graduate)* #linebreak() Pijak × IBM SkillsBuild (Dicoding Indonesia)],
+  [Feb -- Jul 2026],
 )
 #v(2pt)
 - Completed structured learning path covering Python, supervised/unsupervised ML, deep learning (CNN & RNN), experiment tracking (MLflow), and production ML deployment via IBM SkillsBuild and Dicoding's industry curriculum.
-- Built *PriorMail* as capstone: an email intelligence system with DistilBERT fine-tuning for 4-class priority classification; designed phishing detection module with security-focused adversarial evaluation protocol.
-- Earned dual certificates from IBM SkillsBuild and Dicoding upon module completion.
+- Built *PriorMail* as capstone (scored 98/100): an email intelligence system with DistilBERT fine-tuning for 4-class priority classification; designed phishing detection module with security-focused adversarial evaluation protocol.
+- Graduated Lulus Penuh (Full Pass) and recognized as Top Graduate ("Lulus Terbaik") of the cohort.
 
 #v(3pt)
 #row(
@@ -151,7 +151,7 @@ Actively seeking a software engineering or ML engineering internship.
 // ── Certifications ───────────────────────────────────────────────────────────
 
 #section("Certifications")
-- *AI Engineer Cohort*, IBM SkillsBuild + Dicoding Indonesia #h(1fr) Jan -- Jul 2026
+- *AI Engineer Cohort (Top Graduate)*, IBM SkillsBuild + Dicoding Indonesia #h(1fr) Feb -- Jul 2026
 - *Associate Data Scientist*, BNSP (Badan Nasional Sertifikasi Profesi) #h(1fr) Jul 2026
 - *Belajar Fundamental Deep Learning* (Deep Learning Fundamentals), Dicoding Indonesia #h(1fr) May 2026
 - *Belajar Machine Learning untuk Pemula* (ML for Beginners), Dicoding Indonesia #h(1fr) Mar 2026
