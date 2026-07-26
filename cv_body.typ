@@ -116,12 +116,12 @@ Actively seeking a software engineering or ML engineering internship.
 
 #v(3pt)
 #row(
-  [*Head of Funding & Consumption Division* #linebreak() IT TODAY, HIMALKOM IPB University],
-  [Apr 2025 -- Dec 2025],
+  [*Head of Entrepreneurship & Consumption Committee* #linebreak() IT TODAY, HIMALKOM IPB University],
+  [Feb -- Dec 2025],
 )
 #v(2pt)
 - Managed IDR 33 million F&B consumption budget covering meals, snacks, and catering for 500+ participants and 90+ committee members across the full IT TODAY event series.
-- Secured IDR 5 million in internal operational funding through entrepreneurial methods to support division activities.
+- Secured IDR 5 million in internal operational funding through entrepreneurial methods to support committee activities.
 
 #v(3pt)
 #row(
