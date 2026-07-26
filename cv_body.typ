@@ -134,12 +134,11 @@ Actively seeking a software engineering or ML engineering internship.
 
 #v(3pt)
 #row(
-  [*Teaching Volunteer* #linebreak() LPK Tepi Sawah, HIMALKOM IPB University],
+  [*Teaching Volunteer, Ilkomerz Mengajar* #linebreak() LPK Tepi Sawah, HIMALKOM IPB University],
   [Feb 2025 -- Nov 2025],
 )
 #v(2pt)
-- Delivered 14 teaching sessions to 25+ children in Leuwiliang, Bogor over 9 months, covering literacy, English, mathematics, environmental awareness, and introductory programming through game-based activities.
-- Served a dual role: committee organizer (coordination, logistics) and on-site volunteer (direct teaching and mentoring).
+- Completed 90 volunteer teaching hours (Grade A, 94.96/100) across 14 sessions to 25+ children in Leuwiliang, Bogor over 9 months, covering literacy, English, mathematics, environmental awareness, and introductory programming through game-based activities.
 
 // ── Education ───────────────────────────────────────────────────────────────
 
