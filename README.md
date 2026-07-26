@@ -77,7 +77,7 @@ The grid links to the repositories behind each project:
 3. **AgriDesk**: full-stack academic document management system on Clean Architecture, DDD,
    and finite-state document workflows. SHA-256 hashing with QR verification, 118 tests.
 4. **Produce Freshness Classification**: classical ML vs. MobileNetV2 CNN across 11 experiment
-   scenarios, 98.70% best accuracy with paired significance testing, 66 pytest unit tests.
+   scenarios, 98.70% best accuracy with paired significance testing, 64 pytest unit tests.
 5. **Loan Approval Prediction**: Optuna-tuned LightGBM + XGBoost + CatBoost ensemble for a
    Kaggle competition, 0.9325 out-of-fold AUC.
 6. **LTI Incident Risk Prediction**: BNSP Associate Data Scientist certification project

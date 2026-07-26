@@ -39,12 +39,12 @@ Actively seeking a software engineering or ML engineering internship.
   columns: (auto, 1fr),
   column-gutter: 6pt,
   row-gutter: 2pt,
-  [*Languages:*],       [Python, JavaScript, TypeScript, SQL],
-  [*Frontend:*],        [React 18, Tailwind CSS, Vite],
+  [*Languages:*],       [Python, JavaScript, TypeScript],
+  [*Frontend:*],        [React, Tailwind CSS, Vite],
   [*Backend & DB:*],    [FastAPI, SQLAlchemy 2.0, PostgreSQL, JWT + bcrypt, Alembic],
   [*ML / Data:*],       [LightGBM, XGBoost, Scikit-learn, Pandas, NumPy],
   [*DevOps / Tools:*],  [Docker, GitHub Actions (CI/CD), Git, pytest],
-  [*Familiar:*],        [Next.js, Supabase, PyTorch, Hugging Face Transformers, TensorFlow/Keras, MLflow, Prometheus, Grafana, Weights & Biases, Bash, ReportLab, PyPDF],
+  [*Familiar:*],        [SQL, Next.js, Supabase, PyTorch, Hugging Face Transformers, TensorFlow/Keras, CatBoost, Optuna, MLflow, Prometheus, Grafana, Weights & Biases, Bash, ReportLab, PyPDF],
 )
 
 // ── Projects ────────────────────────────────────────────────────────────────
@@ -58,7 +58,7 @@ Actively seeking a software engineering or ML engineering internship.
   [Apr -- Jun 2026],
 )
 #v(2pt)
-- Independently built an end-to-end ML system predicting AQI across 30 cities in Bangladesh; trained LightGBM on 1M+ rows of multi-pollutant sensor data achieving MAE = 1.13, RMSE = 1.77, R² = 0.9986; chosen over XGBoost for 3--10× faster training on large-scale tabular data.
+- Independently built an end-to-end ML system predicting AQI across 30 cities in Bangladesh; trained LightGBM on 1M+ rows of multi-pollutant sensor data achieving MAE = 1.13, RMSE = 1.77, R² = 0.9986.
 - Engineered modular pipeline with centralized YAML config, lag features, rolling windows, cyclical time encoding, and walk-forward cross-validation (3-fold) for time-aware evaluation; experiment tracking via CSV logging.
 - Implemented 40 unit tests across 6 modules (pytest + coverage); CI/CD via GitHub Actions with black/flake8 enforcement and pre-commit hooks; containerized with Docker for reproducible deployment.
 
@@ -68,7 +68,7 @@ Actively seeking a software engineering or ML engineering internship.
   [Jan -- Jun 2026],
 )
 #v(2pt)
-- Led full-stack development of a 4-person team project; solely responsible for the complete local implementation: backend in FastAPI + SQLAlchemy 2.0 + Alembic on PostgreSQL and frontend in React 18 + Vite + TailwindCSS v4, built on Clean Architecture, Domain-Driven Design (DDD), and Finite State Machine document workflows with drag-and-drop PDF upload.
+- Led full-stack development of a 4-person team project; solely responsible for the complete local implementation: backend in FastAPI + SQLAlchemy 2.0 + Alembic on PostgreSQL and frontend in React 19 + Vite + TailwindCSS v4, built on Clean Architecture, Domain-Driven Design (DDD), and Finite State Machine document workflows with drag-and-drop PDF upload.
 - Implemented SHA-256 document hashing with QR code verification enabling third-party authentication without system login; PDF generation (ReportLab + PyPDF) with coordinate-based digital signature stamping.
 - Achieved 100% test coverage on core services across 118 passing tests; JWT + bcrypt authentication; in-memory SQLite for isolated unit testing.
 
@@ -80,7 +80,7 @@ Actively seeking a software engineering or ML engineering internship.
 #v(2pt)
 - Independently designed and executed 11 experiment scenarios comparing classical ML (SVM, Random Forest) against a MobileNetV2 CNN for binary fresh/rotten produce classification across 4,391 test images; best CNN scenario reached 98.70% accuracy, a statistically significant improvement over the best classical model (87.34% via SVM, p < 0.001).
 - Used paired significance testing to catch a counterintuitive result: a CNN on raw unprocessed images significantly outperformed the same CNN behind a full image-restoration and segmentation pipeline (98.70% vs. 97.22%, p < 0.001).
-- Built with 66 pytest unit tests, GitHub Actions CI, and ruff linting; pipeline logic kept side-effect-free and decoupled from Kaggle-specific orchestration for reproducibility.
+- Built with 64 pytest unit tests, GitHub Actions CI, and ruff linting; pipeline logic kept side-effect-free and decoupled from Kaggle-specific orchestration for reproducibility.
 
 #v(3pt)
 #row(
