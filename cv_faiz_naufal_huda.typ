@@ -1,4 +1,4 @@
-#set page(paper: "a4", margin: (x: 0.62in, y: 0.55in))
+#set page(paper: "a4", margin: (x: 0.55in, y: 0.45in))
 #set text(font: "New Computer Modern", size: 9.8pt)
 #set par(leading: 0.5em, justify: false)
 #show link: set text(fill: black)
