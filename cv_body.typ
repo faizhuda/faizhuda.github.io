@@ -55,7 +55,7 @@ Actively seeking a software engineering or ML engineering internship.
 
 #row(
   [*AQI Bangladesh: Air Quality Prediction* #h(6pt) #text(size: 9pt)[(#link("https://github.com/faizhuda/aqi-bangladesh-prediction")[github.com/faizhuda/aqi-bangladesh-prediction])]],
-  [Apr -- Jun 2026],
+  [May -- Jun 2026],
 )
 #v(2pt)
 - Independently built an end-to-end ML system predicting AQI across 30 cities in Bangladesh; trained LightGBM on 1M+ rows of multi-pollutant sensor data achieving MAE = 1.13, RMSE = 1.77, R² = 0.9986.
@@ -65,7 +65,7 @@ Actively seeking a software engineering or ML engineering internship.
 #v(3pt)
 #row(
   [*AgriDesk: Academic Document Management System* #h(6pt) #text(size: 9pt)[(#link("https://github.com/faizhuda/ads-agridesk")[github.com/faizhuda/ads-agridesk])]],
-  [Jan -- Jun 2026],
+  [Feb -- Jun 2026],
 )
 #v(2pt)
 - Led full-stack development of a 4-person team project; solely responsible for the complete local implementation: backend in FastAPI + SQLAlchemy 2.0 + Alembic on PostgreSQL and frontend in React 19 + Vite + TailwindCSS v4, built on Clean Architecture, Domain-Driven Design (DDD), and Finite State Machine document workflows with drag-and-drop PDF upload.
