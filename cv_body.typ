@@ -151,7 +151,7 @@ Actively seeking a software engineering or ML engineering internship.
 // ── Certifications ───────────────────────────────────────────────────────────
 
 #section("Certifications")
-- *AI Engineer Cohort (Top Graduate)*, IBM SkillsBuild + Dicoding Indonesia #h(1fr) Feb -- Jul 2026
+- *AI Engineer Cohort (Top Graduate)*, IBM SkillsBuild + Dicoding Indonesia #h(1fr) Jul 2026
 - *Associate Data Scientist*, BNSP (Badan Nasional Sertifikasi Profesi) #h(1fr) Jul 2026
 - *Belajar Fundamental Deep Learning* (Deep Learning Fundamentals), Dicoding Indonesia #h(1fr) May 2026
 - *Belajar Machine Learning untuk Pemula* (ML for Beginners), Dicoding Indonesia #h(1fr) Mar 2026
