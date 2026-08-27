@@ -539,6 +539,45 @@ h3.timeline-title {
   margin-top: 6px;
 }
 
+/* Credentials Section */
+.credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.credential-card {
+  display: flex;
+  min-height: 220px;
+  flex-direction: column;
+}
+
+.credential-kicker {
+  margin-bottom: 18px;
+  color: var(--text-dim);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.credential-title {
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+  line-height: 1.3;
+}
+
+.credential-issuer {
+  color: var(--text-secondary);
+}
+
+.credential-meta {
+  margin-top: auto;
+  padding-top: 24px;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+}
+
 /* Projects Section */
 .projects-grid {
   display: grid;
@@ -660,6 +699,9 @@ h3.timeline-title {
 .email-copy-box {
   display: inline-flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 16px;
   background-color: var(--bg-primary);
   border: 1px solid var(--border-color);
   border-radius: 8px;
@@ -681,7 +723,8 @@ h3.timeline-title {
   font-family: monospace;
   font-size: 1rem;
   color: var(--text-primary);
-  margin-right: 20px;
+  min-width: 0;
+  margin-right: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -694,6 +737,7 @@ h3.timeline-title {
 }
 
 .btn-copy {
+  flex: 0 0 auto;
   min-height: 44px;
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-color);
@@ -941,6 +985,10 @@ h3.timeline-title {
   .btn-copy {
     width: 100%;
     justify-content: center;
+  }
+
+  .credentials-grid {
+    grid-template-columns: 1fr;
   }
 }
 
