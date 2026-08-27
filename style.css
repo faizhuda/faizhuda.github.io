@@ -7,23 +7,23 @@
   --bg-secondary: #0d0d0d;
   --bg-tertiary: #161616;
   --bg-card: rgba(15, 15, 15, 0.7);
-  
+
   --text-primary: #ffffff;
   --text-secondary: #a3a3a3;
   --text-muted: #525252;
   --text-dim: #737373;
-  
+
   --border-color: #262626;
   --border-hover: #404040;
   --border-active: #ffffff;
-  
+
   --glass-bg: rgba(10, 10, 10, 0.75);
   --glass-border: rgba(255, 255, 255, 0.05);
   --glass-border-hover: rgba(255, 255, 255, 0.15);
-  
+
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-heading: 'Outfit', var(--font-sans);
-  
+
   --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -230,6 +230,11 @@ a {
 
 .menu-toggle {
   display: none;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   background: none;
   border: none;
   cursor: pointer;
@@ -602,6 +607,7 @@ h3.timeline-title {
 }
 
 .project-link {
+  min-height: 44px;
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--text-primary);
@@ -621,11 +627,6 @@ h3.timeline-title {
 /* Contact Section */
 #contact {
   padding: 60px 0;
-}
-
-.contact-container {
-  max-width: 850px;
-  margin: 0 auto;
 }
 
 .contact-card {
@@ -674,6 +675,9 @@ h3.timeline-title {
 }
 
 .email-text {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   font-family: monospace;
   font-size: 1rem;
   color: var(--text-primary);
@@ -690,6 +694,7 @@ h3.timeline-title {
 }
 
 .btn-copy {
+  min-height: 44px;
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-color);
   color: var(--text-secondary);
@@ -813,23 +818,23 @@ h3.timeline-title {
     text-align: center;
     padding-top: 0;
   }
-  
+
   .hero-content {
     order: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+
   .hero-image-container {
     order: 1;
   }
-  
+
   .hero-description {
     margin-right: auto;
     margin-left: auto;
   }
-  
+
   .hero-title {
     font-size: clamp(2rem, 7vw, 3rem);
   }
@@ -838,17 +843,18 @@ h3.timeline-title {
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   .hero-image-wrapper {
     max-width: 250px;
   }
-  
+
   .about-grid {
     grid-template-columns: 1fr;
     gap: 50px;
   }
-  
+
   .projects-grid {
+    grid-template-columns: minmax(0, 1fr);
     grid-auto-rows: auto;
   }
 }
@@ -857,15 +863,15 @@ h3.timeline-title {
   .section {
     padding: 64px 0;
   }
-  
+
   .section-title {
     font-size: 2rem;
   }
-  
+
   .section-subtitle {
     margin-bottom: 32px;
   }
-  
+
   .nav-menu {
     position: fixed;
     top: 70px;
@@ -881,54 +887,57 @@ h3.timeline-title {
     transition: var(--transition-smooth);
     border-top: 1px solid var(--border-color);
   }
-  
+
   .nav-menu.active {
     transform: translateX(0);
   }
-  
+
   .nav-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
     font-size: 1.2rem;
   }
-  
+
   .menu-toggle {
-    display: block;
+    display: flex;
   }
-  
+
   /* Menu open icon transformation */
   .navbar.menu-open .menu-toggle span:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
   }
-  
+
   .navbar.menu-open .menu-toggle span:nth-child(2) {
     opacity: 0;
   }
-  
+
   .navbar.menu-open .menu-toggle span:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
   }
-  
+
   .btn-group {
     flex-direction: column;
     width: 100%;
   }
-  
+
   .btn {
     width: 100%;
     justify-content: center;
   }
-  
+
   .email-copy-box {
     width: 100%;
     flex-direction: column;
     padding: 16px;
     gap: 12px;
   }
-  
+
   .email-text {
     margin-right: 0;
     text-align: center;
   }
-  
+
   .btn-copy {
     width: 100%;
     justify-content: center;
@@ -997,7 +1006,7 @@ h3.timeline-title {
   border-radius: 8px;
   padding: 10px 14px;
   font-family: inherit;
-  font-size: 0.95rem;
+  font-size: 1rem;
   transition: var(--transition-smooth);
 }
 
@@ -1014,6 +1023,7 @@ h3.timeline-title {
 }
 
 .btn-submit {
+  min-height: 44px;
   width: 100%;
   justify-content: center;
   margin-top: 10px;

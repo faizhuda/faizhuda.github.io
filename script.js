@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function type() {
       const currentTitle = titles[titleIndex];
-      
+
       if (isDeleting) {
         // Deleting characters
         typewriterElement.textContent = currentTitle.substring(0, charIndex - 1);
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!isDeleting && charIndex === currentTitle.length) {
         delay = 2000; // Hold word for 2s
         isDeleting = true;
-      } 
+      }
       // If finished deleting the word
       else if (isDeleting && charIndex === 0) {
         isDeleting = false;
@@ -119,11 +119,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!toast) return;
     toast.textContent = message;
     toast.classList.add('show');
-    
+
     if (toastTimeout) {
       clearTimeout(toastTimeout);
     }
-    
+
     toastTimeout = setTimeout(() => {
       toast.classList.remove('show');
     }, 3000);
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnCopy && emailText && toast) {
     btnCopy.addEventListener('click', () => {
       const email = emailText.textContent.trim();
-      
+
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(email).then(() => {
           showToastNotification('Email copied to clipboard!');
@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         fallbackCopy(email);
       }
-      
+
       function fallbackCopy(text) {
         try {
           const textArea = document.createElement("textarea");
@@ -180,11 +180,11 @@ document.addEventListener('DOMContentLoaded', () => {
     el.addEventListener('touchstart', () => {
       el.classList.add('hovered');
     }, { passive: true });
-    
+
     el.addEventListener('touchend', () => {
       el.classList.remove('hovered');
     }, { passive: true });
-    
+
     el.addEventListener('touchcancel', () => {
       el.classList.remove('hovered');
     }, { passive: true });
@@ -205,24 +205,24 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- CONTACT FORM SUBMISSION ---
   const contactForm = document.getElementById('contact-form');
   const btnSubmit = document.getElementById('btn-submit');
-  
+
   if (contactForm && btnSubmit) {
     const submitText = btnSubmit.querySelector('span');
     const originalText = submitText ? submitText.textContent : 'Send Message';
-    
+
     contactForm.addEventListener('submit', e => {
       e.preventDefault();
-      
+
       // Update sending visual state
       if (submitText) submitText.textContent = 'Sending...';
       btnSubmit.disabled = true;
-      
+
       const formData = new FormData(contactForm);
       const jsonObject = {};
       formData.forEach((value, key) => {
         jsonObject[key] = value;
       });
-      
+
       // If Web3Forms placeholder key is present, run fallback in simulated mode
       if (jsonObject['access_key'] === 'YOUR_ACCESS_KEY_HERE') {
         setTimeout(() => {
@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1000);
         return;
       }
-      
+
       // Async post submit to Web3Forms
       fetch('https://api.web3forms.com/submit', {
         method: 'POST',
