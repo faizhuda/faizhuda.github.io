@@ -1,602 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faiz Naufal Huda | Data Scientist & ML Engineer Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Faiz Naufal Huda | Data Science &amp; ML Engineering</title>
+  <meta name="description" content="Portfolio of Faiz Naufal Huda, an IPB University Computer Science student building tested, reproducible machine-learning systems.">
+  <meta name="author" content="Faiz Naufal Huda">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#0a0b0d">
+  <meta name="color-scheme" content="dark">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data:; connect-src 'none'; base-uri 'self'; form-action 'self'; object-src 'none'">
+  <link rel="canonical" href="https://faizhuda.github.io/">
 
-    <!-- Meta Tags for SEO -->
-    <meta name="description" content="Portfolio of Faiz Naufal Huda, a Computer Science student at IPB University (GPA 3.85) and BNSP-certified Associate Data Scientist building end-to-end ML systems, full-stack applications, and CI/CD pipelines. Seeking Data Science, Data Analyst, or ML engineering internship opportunities.">
-    <meta name="keywords" content="Faiz Naufal Huda, IPB University, Computer Science, Data Scientist, Data Analyst, Machine Learning, Full Stack Developer, FastAPI, React, LightGBM, PyTorch, Docker, DevOps, Portfolio, ML Engineer">
-    <meta name="author" content="Faiz Naufal Huda">
-    <meta name="robots" content="index, follow, max-image-preview:large">
-    <link rel="canonical" href="https://faizhuda.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://faizhuda.github.io/">
+  <meta property="og:title" content="Faiz Naufal Huda | Data Science &amp; ML Engineering">
+  <meta property="og:description" content="Selected work in machine learning and full-stack engineering, backed by metrics, tests, and public repositories.">
+  <meta property="og:image" content="https://faizhuda.github.io/image/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Faiz Naufal Huda — Data Science and ML Engineering">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Faiz Naufal Huda">
 
-    <!-- Security headers (defense-in-depth; GitHub Pages serves no custom HTTP headers) -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.web3forms.com; form-action 'self' https://api.web3forms.com; base-uri 'self'; object-src 'none'">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Faiz Naufal Huda | Data Science &amp; ML Engineering">
+  <meta name="twitter:description" content="Selected work in machine learning and full-stack engineering, backed by metrics, tests, and public repositories.">
+  <meta name="twitter:image" content="https://faizhuda.github.io/image/og.png">
+  <meta name="twitter:image:alt" content="Faiz Naufal Huda — Data Science and ML Engineering">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://faizhuda.github.io/">
-    <meta property="og:title" content="Faiz Naufal Huda | Data Scientist & ML Engineer">
-    <meta property="og:description" content="Computer Science student at IPB University (GPA 3.85), BNSP-certified Associate Data Scientist, building end-to-end ML systems, full-stack applications, and CI/CD pipelines.">
-    <meta property="og:image" content="https://faizhuda.github.io/image/profile.png">
-    <meta property="og:image:width" content="880">
-    <meta property="og:image:height" content="1173">
-    <meta property="og:image:alt" content="Faiz Naufal Huda profile photo">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:site_name" content="Faiz Naufal Huda Portfolio">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Faiz Naufal Huda",
+    "url": "https://faizhuda.github.io/",
+    "image": "https://faizhuda.github.io/image/profile.png",
+    "jobTitle": "Computer Science Student and Associate Data Scientist",
+    "description": "Computer Science undergraduate at IPB University building tested and reproducible machine-learning systems.",
+    "email": "mailto:faiznaufal2015@gmail.com",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "IPB University",
+      "url": "https://www.ipb.ac.id/"
+    },
+    "homeLocation": {
+      "@type": "Place",
+      "name": "Bogor, Indonesia"
+    },
+    "knowsAbout": ["Machine Learning", "Python", "SQL", "FastAPI", "React", "Docker", "Automated Testing"],
+    "sameAs": [
+      "https://www.linkedin.com/in/faizhuda",
+      "https://github.com/faizhuda"
+    ]
+  }
+  </script>
 
-    <!-- Twitter Card (summary, not summary_large_image: the profile photo is portrait 3:4
-         and would be center-cropped badly in the 1.91:1 large-image frame) -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Faiz Naufal Huda | Data Scientist & ML Engineer">
-    <meta name="twitter:description" content="Computer Science student at IPB University (GPA 3.85), BNSP-certified Associate Data Scientist, building end-to-end ML systems, full-stack applications, and CI/CD pipelines.">
-    <meta name="twitter:image" content="https://faizhuda.github.io/image/profile.png">
-    <meta name="twitter:image:alt" content="Faiz Naufal Huda profile photo">
-    
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Faiz Naufal Huda",
-      "url": "https://faizhuda.github.io",
-      "image": "https://faizhuda.github.io/image/profile.png",
-      "jobTitle": "Computer Science Student, Associate Data Scientist",
-      "description": "Computer Science undergraduate at IPB University and BNSP-certified Associate Data Scientist, building end-to-end ML systems, full-stack applications, and CI/CD pipelines.",
-      "email": "mailto:faiznaufal2015@gmail.com",
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "IPB University",
-        "url": "https://www.ipb.ac.id/"
-      },
-      "homeLocation": {
-        "@type": "Place",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Bogor",
-          "addressCountry": "ID"
-        }
-      },
-      "knowsLanguage": ["id", "en"],
-      "knowsAbout": ["Machine Learning", "Full-Stack Development", "DevOps", "Python", "React", "FastAPI", "Docker"],
-      "sameAs": [
-        "https://www.linkedin.com/in/faizhuda",
-        "https://github.com/faizhuda"
-      ]
-    }
-    </script>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Favicon & theme -->
-    <link rel="icon" type="image/x-icon" href="image/favicon.ico">
-    <link rel="apple-touch-icon" href="image/profile.png">
-    <meta name="theme-color" content="#050505">
-    <meta name="color-scheme" content="dark">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css?v=30">
+  <link rel="icon" href="image/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="image/profile.png">
+  <link rel="stylesheet" href="style.css?v=40">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-
-    <!-- Sticky Navigation -->
-    <nav class="navbar" id="navbar" aria-label="Main navigation">
-        <div class="scroll-progress-container">
-            <div class="scroll-progress-bar" id="scroll-bar"></div>
-        </div>
-        <div class="container navbar-container">
-            <a href="#home" class="logo" id="nav-logo">
-                faizhuda
-            </a>
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <main id="main-content">
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container hero-grid">
-            <div class="hero-content">
-                <p class="hero-tagline">Welcome to my space</p>
-                <h1 class="hero-title">
-                    Hi, I'm Faiz Huda
-                    <span class="sr-only">Data Scientist and ML Engineer</span>
-                    <span class="typewriter-text" id="typewriter" aria-hidden="true">Computer Science Student</span>
-                </h1>
-                <p class="hero-description">
-                    A Computer Science undergraduate at IPB University (GPA 3.85) and BNSP-certified Associate Data Scientist, building end-to-end ML systems, full-stack applications, and CI/CD pipelines, from 1M-row LightGBM models to award-winning hackathon platforms.
-                </p>
-                <div class="btn-group">
-                    <a href="https://www.linkedin.com/in/faizhuda" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="btn-linkedin">
-                        Connect on LinkedIn
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                    </a>
-                    <a href="cv_faiz_naufal_huda.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="btn-cv">
-                        View CV
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="hero-image-container">
-                <div class="hero-image-wrapper">
-                    <img src="image/profile.png?v=1" alt="Faiz Naufal Huda Profile Picture" class="hero-img" width="880" height="1173" fetchpriority="high" loading="eager">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About & Education Timeline Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title fade-up-element" id="about-title">About Me</h2>
-            <p class="section-subtitle fade-up-element">My background & education</p>
-            
-            <div class="about-grid">
-                <div class="about-text fade-up-element">
-                    <p>
-                        I am a Computer Science undergraduate at <strong>IPB University (Institut Pertanian Bogor)</strong>, Batch 60, with a GPA of 3.85/4.00. I build end-to-end systems, from machine learning pipelines to full-stack web applications.
-                    </p>
-                    <p>
-                        My work spans <strong>ML engineering</strong> (LightGBM, XGBoost, Scikit-learn), <strong>full-stack development</strong> (React, FastAPI, PostgreSQL), and <strong>CI/CD</strong> (Docker, GitHub Actions, pytest). I care about the fundamentals: clean architecture, test coverage, and reproducible pipelines. I've also worked with PyTorch, Hugging Face Transformers, Next.js, and Prometheus/Grafana on individual projects.
-                    </p>
-                    <p>
-                        I completed the <strong>Pijak × IBM SkillsBuild AI Engineer Cohort</strong> as a selected participant, graduating as Top Graduate, am a BNSP-certified <strong>Associate Data Scientist</strong>, and hold a TOEFL ITP score of 607. I'm actively seeking internship opportunities in Data Science, Data Analyst, or ML engineering.
-                    </p>
-                </div>
-                
-                <div class="timeline" id="about-timeline">
-                    <!-- Timeline Item 1 -->
-                    <div class="timeline-item fade-up-element">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">2023 - Present</div>
-                        <h3 class="timeline-title"><a href="https://www.ipb.ac.id/" target="_blank" rel="noopener noreferrer">IPB University</a></h3>
-                        <p class="timeline-subtitle">Bachelor of Computer Science</p>
-                        <p class="timeline-desc">GPA 3.85 / 4.00 · Building ML systems, full-stack apps, and DevOps pipelines alongside coursework in algorithms, databases, and statistics.</p>
-                    </div>
-                    
-                    <!-- Timeline Item 2 -->
-                    <div class="timeline-item fade-up-element">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">2020 - 2023</div>
-                        <h3 class="timeline-title"><a href="https://bogor.bosowaschool.sch.id/program/program_sma" target="_blank" rel="noopener noreferrer">SMA Bosowa Bina Insani</a></h3>
-                        <p class="timeline-subtitle">Natural Science (MIPA) Major</p>
-                        <p class="timeline-desc">Built a solid background in math, physics, and systematic reasoning.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <div class="container">
-            <h2 class="section-title fade-up-element" id="skills-title">My Expertise</h2>
-            <p class="section-subtitle fade-up-element">What I bring to the table</p>
-
-            <div class="skills-grid">
-                <!-- Skill Category 1: Languages -->
-                <div class="glass-card fade-up-element" id="skill-cat-languages">
-                    <h3 class="skill-category-title">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-inline"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                        Languages
-                    </h3>
-                    <div class="skill-list">
-                        <span class="skill-badge">Python</span>
-                        <span class="skill-badge">SQL</span>
-                        <span class="skill-badge">TypeScript</span>
-                        <span class="skill-badge">JavaScript</span>
-                    </div>
-                    <span class="skill-tier-label">Familiar</span>
-                    <div class="skill-list">
-                        <span class="skill-badge familiar">Bash</span>
-                    </div>
-                </div>
-
-                <!-- Skill Category 2: ML & AI -->
-                <div class="glass-card fade-up-element" id="skill-cat-ml">
-                    <h3 class="skill-category-title">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-inline"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-                        Machine Learning & AI
-                    </h3>
-                    <div class="skill-list">
-                        <span class="skill-badge">LightGBM</span>
-                        <span class="skill-badge">XGBoost</span>
-                        <span class="skill-badge">Scikit-learn</span>
-                        <span class="skill-badge">Pandas</span>
-                        <span class="skill-badge">NumPy</span>
-                    </div>
-                    <span class="skill-tier-label">Familiar</span>
-                    <div class="skill-list">
-                        <span class="skill-badge familiar">PyTorch</span>
-                        <span class="skill-badge familiar">Hugging Face</span>
-                        <span class="skill-badge familiar">TensorFlow / Keras</span>
-                        <span class="skill-badge familiar">CatBoost</span>
-                        <span class="skill-badge familiar">Optuna</span>
-                    </div>
-                </div>
-
-                <!-- Skill Category 3: Web & Backend -->
-                <div class="glass-card fade-up-element" id="skill-cat-web">
-                    <h3 class="skill-category-title">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-inline"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-                        Web & Backend
-                    </h3>
-                    <div class="skill-list">
-                        <span class="skill-badge">React</span>
-                        <span class="skill-badge">Tailwind CSS</span>
-                        <span class="skill-badge">Vite</span>
-                        <span class="skill-badge">FastAPI</span>
-                        <span class="skill-badge">PostgreSQL</span>
-                        <span class="skill-badge">SQLAlchemy 2.0</span>
-                        <span class="skill-badge">Alembic</span>
-                        <span class="skill-badge">JWT + bcrypt</span>
-                    </div>
-                    <span class="skill-tier-label">Familiar</span>
-                    <div class="skill-list">
-                        <span class="skill-badge familiar">Next.js</span>
-                        <span class="skill-badge familiar">Supabase</span>
-                    </div>
-                </div>
-
-                <!-- Skill Category 4: DevOps -->
-                <div class="glass-card fade-up-element" id="skill-cat-devops">
-                    <h3 class="skill-category-title">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-inline"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
-                        DevOps & Infra
-                    </h3>
-                    <div class="skill-list">
-                        <span class="skill-badge">Docker</span>
-                        <span class="skill-badge">GitHub Actions</span>
-                        <span class="skill-badge">Git</span>
-                        <span class="skill-badge">pytest</span>
-                    </div>
-                    <span class="skill-tier-label">Familiar</span>
-                    <div class="skill-list">
-                        <span class="skill-badge familiar">MLflow</span>
-                        <span class="skill-badge familiar">Prometheus</span>
-                        <span class="skill-badge familiar">Grafana</span>
-                        <span class="skill-badge familiar">Weights & Biases</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title fade-up-element" id="projects-title">Featured Projects</h2>
-            <p class="section-subtitle fade-up-element">Engineering & ML Showcases</p>
-
-            <!-- Project Filters -->
-            <div class="project-filters fade-up-element" id="project-filters" role="group" aria-label="Filter projects by category">
-                <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
-                <button type="button" class="filter-btn" data-filter="ml-data" aria-pressed="false">ML &amp; Data Science</button>
-                <button type="button" class="filter-btn" data-filter="full-stack" aria-pressed="false">Full-Stack</button>
-                <button type="button" class="filter-btn" data-filter="devops-cloud" aria-pressed="false">DevOps &amp; Cloud</button>
-            </div>
-
-            <div class="projects-grid">
-                <!-- Project 1: AgritechJam -->
-                <div class="glass-card project-card fade-up-element" id="project-agritechjam" data-category="full-stack">
-                    <div class="project-header">
-                        <h3 class="project-title">MyToko: E-Commerce Platform</h3>
-                        <p class="project-tag">AgritechJam · Agriinformatics 2025 · 2nd Place</p>
-                    </div>
-                    <p class="project-desc">
-                        Placed 2nd as full-stack developer in a 3-person team. Built a complete customer + admin e-commerce platform within the hackathon timeframe. Uses PostgreSQL stored procedures for atomic order cancellation with inventory rollback, eliminating race conditions on concurrent stock updates.
-                    </p>
-                    <div class="project-tags">
-                        <span>Next.js</span>
-                        <span>TypeScript</span>
-                        <span>Tailwind CSS</span>
-                        <span>Supabase</span>
-                        <span>PostgreSQL</span>
-                        <span>Recharts</span>
-                    </div>
-                    <a href="https://github.com/faizhuda/agritechjam-mytoko" target="_blank" rel="noopener noreferrer" class="project-link">
-                        View Repository
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </a>
-                </div>
-
-                <!-- Project 2: AQI Bangladesh -->
-                <div class="glass-card project-card fade-up-element" id="project-aqi-bangladesh" data-category="ml-data">
-                    <div class="project-header">
-                        <h3 class="project-title">AQI Bangladesh Prediction</h3>
-                        <p class="project-tag">Machine Learning</p>
-                    </div>
-                    <p class="project-desc">
-                        Independently built an end-to-end ML system predicting AQI across 30 cities in Bangladesh. Trained LightGBM on 1M+ rows of multi-pollutant sensor data achieving MAE = 1.13, RMSE = 1.77, R² = 0.9986. Includes 40 unit tests, CI/CD via GitHub Actions, walk-forward cross-validation, and Docker deployment.
-                    </p>
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>LightGBM</span>
-                        <span>Pytest</span>
-                        <span>Docker</span>
-                        <span>GitHub Actions</span>
-                        <span>YAML Config</span>
-                    </div>
-                    <a href="https://github.com/faizhuda/aqi-bangladesh-prediction" target="_blank" rel="noopener noreferrer" class="project-link">
-                        View Repository
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </a>
-                </div>
-
-                <!-- Project 3: AgriDesk -->
-                <div class="glass-card project-card fade-up-element" id="project-agridesk" data-category="full-stack">
-                    <div class="project-header">
-                        <h3 class="project-title">AgriDesk: Document Management System</h3>
-                        <p class="project-tag">Full-Stack · Clean Architecture</p>
-                    </div>
-                    <p class="project-desc">
-                        Led full-stack development of an academic document management system built on Clean Architecture, DDD, and Finite State Machine workflows. Features SHA-256 document hashing, QR code verification, PDF signature stamping, and 118 passing tests with 100% core coverage.
-                    </p>
-                    <div class="project-tags">
-                        <span>React 19</span>
-                        <span>FastAPI</span>
-                        <span>PostgreSQL</span>
-                        <span>SQLAlchemy 2.0</span>
-                        <span>Alembic</span>
-                        <span>Pytest</span>
-                    </div>
-                    <a href="https://github.com/faizhuda/ads-agridesk" target="_blank" rel="noopener noreferrer" class="project-link">
-                        View Repository
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </a>
-                </div>
-
-                <!-- Project 4: Produce Freshness Classifier -->
-                <div class="glass-card project-card fade-up-element" id="project-produce-freshness" data-category="ml-data">
-                    <div class="project-header">
-                        <h3 class="project-title">Produce Freshness Classification</h3>
-                        <p class="project-tag">Computer Vision</p>
-                    </div>
-                    <p class="project-desc">
-                        Independently ran 11 experiment scenarios comparing classical ML (SVM, Random Forest) against a MobileNetV2 CNN for fresh/rotten produce classification. Best CNN scenario reached 98.70% accuracy (vs. 87.34% for the best classical model, p &lt; 0.001); paired significance testing caught a counterintuitive result along the way, since raw images beat the full restoration + segmentation pipeline. Backed by 64 pytest unit tests and GitHub Actions CI.
-                    </p>
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>TensorFlow/Keras</span>
-                        <span>Scikit-learn</span>
-                        <span>Pytest</span>
-                        <span>GitHub Actions</span>
-                    </div>
-                    <a href="https://github.com/faizhuda/produce-freshness-classifier" target="_blank" rel="noopener noreferrer" class="project-link">
-                        View Repository
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </a>
-                </div>
-
-                <!-- Project 5: Loan Approval Prediction -->
-                <div class="glass-card project-card fade-up-element" id="project-loan-approval" data-category="ml-data">
-                    <div class="project-header">
-                        <h3 class="project-title">Loan Approval Prediction</h3>
-                        <p class="project-tag">Kaggle Competition</p>
-                    </div>
-                    <p class="project-desc">
-                        Built an Optuna-tuned ensemble of LightGBM, XGBoost, and CatBoost for a binary loan-default Kaggle competition, rank-blending the three models to 0.9325 out-of-fold AUC (StratifiedKFold, 5-fold). Feature engineering was driven by measurement, not intuition: class weighting and most derived features were reverted after they measurably reduced OOF AUC.
-                    </p>
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>LightGBM</span>
-                        <span>XGBoost</span>
-                        <span>CatBoost</span>
-                        <span>Optuna</span>
-                    </div>
-                    <a href="https://github.com/faizhuda/loan-approval-prediction" target="_blank" rel="noopener noreferrer" class="project-link">
-                        View Repository
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </a>
-                </div>
-
-                <!-- Project 6: LTI Incident Risk Prediction -->
-                <div class="glass-card project-card fade-up-element" id="project-bananacoal" data-category="ml-data">
-                    <div class="project-header">
-                        <h3 class="project-title">LTI Incident Risk Prediction</h3>
-                        <p class="project-tag">Associate Data Scientist (BNSP)</p>
-                    </div>
-                    <p class="project-desc">
-                        BNSP certification project classifying Lost Time Injury (LTI) risks from 2,699 SHE incident records at PT Banana Coal. Addresses severe class imbalance (7.82% positive rate) and target leakage. Final model: Logistic Regression optimized for recall via self-contained notebook pipeline.
-                    </p>
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>Scikit-learn</span>
-                        <span>Pandas</span>
-                        <span>Jupyter Notebook</span>
-                    </div>
-                    <a href="https://github.com/faizhuda/lti-incident-risk-prediction" target="_blank" rel="noopener noreferrer" class="project-link">
-                        View Repository
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </a>
-                </div>
-
-                <!-- Project 7: Infrastructure Monitoring -->
-                <div class="glass-card project-card fade-up-element" id="project-monitoring" data-category="devops-cloud">
-                    <div class="project-header">
-                        <h3 class="project-title">Infrastructure Monitoring System</h3>
-                        <p class="project-tag">DevOps & Observability</p>
-                    </div>
-                    <p class="project-desc">
-                        Centralized real-time monitoring stack simulating DC-DRC failover environments. Configured Prometheus (15s scrape), custom Grafana dashboards, and Alertmanager with Telegram Bot for automated threshold alerts (CPU/RAM/disk &gt; 80%, node down).
-                    </p>
-                    <div class="project-tags">
-                        <span>Prometheus</span>
-                        <span>Grafana</span>
-                        <span>Alertmanager</span>
-                        <span>Telegram Bot</span>
-                        <span>Docker</span>
-                    </div>
-                    <a href="https://github.com/faizhuda/infrastructure-monitoring-system" target="_blank" rel="noopener noreferrer" class="project-link">
-                        View Repository
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </a>
-                </div>
-
-                <!-- Project 8: Jauhar Urban Farming -->
-                <div class="glass-card project-card fade-up-element" id="project-jauhar" data-category="full-stack">
-                    <div class="project-header">
-                        <h3 class="project-title">Jauhar Urban Farming</h3>
-                        <p class="project-tag">Client Website · Live</p>
-                    </div>
-                    <p class="project-desc">
-                        Solo-built marketing site for a real urban farming business: digital profile, product catalog, and WhatsApp ordering. Fully static and zero-JS by default, with self-hosted fonts (no third-party font requests), JSON-LD structured data, and a scroll-reveal design system that respects prefers-reduced-motion.
-                    </p>
-                    <div class="project-tags">
-                        <span>Astro</span>
-                        <span>Tailwind CSS</span>
-                        <span>TypeScript</span>
-                        <span>Zod</span>
-                        <span>Vercel</span>
-                    </div>
-                    <a href="https://github.com/faizhuda/jauhar-urban-farming" target="_blank" rel="noopener noreferrer" class="project-link">
-                        View Repository
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </a>
-                </div>
-
-                <!-- Project 9: Portfolio -->
-                <div class="glass-card project-card fade-up-element" id="project-portfolio-website" data-category="full-stack">
-                    <div class="project-header">
-                        <h3 class="project-title">Obsidian Noir Portfolio</h3>
-                        <p class="project-tag">Web Development</p>
-                    </div>
-                    <p class="project-desc">
-                        This portfolio is a monochrome single-page site built with semantic HTML5, CSS custom properties, and vanilla JavaScript. Features scroll-triggered animations, typewriter effect, clipboard API with fallback, and mobile-responsive layout.
-                    </p>
-                    <div class="project-tags">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                    </div>
-                    <a href="https://github.com/faizhuda/faizhuda.github.io" target="_blank" rel="noopener noreferrer" class="project-link">
-                        View Repository
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container contact-container">
-            <div class="glass-card contact-card fade-up-element" id="contact-wrapper">
-                <div class="contact-grid">
-                    <!-- Left Column: Info -->
-                    <div class="contact-info">
-                        <h2 class="contact-title">Let's Connect</h2>
-                        <p class="contact-desc">
-                            I am actively seeking internship opportunities in Data Science, Data Analyst, or ML engineering. Feel free to reach out!
-                        </p>
-                        
-                        <div class="email-copy-box">
-                            <a href="mailto:faiznaufal2015@gmail.com" target="_blank" rel="noopener noreferrer" class="email-text">faiznaufal2015@gmail.com</a>
-                            <button class="btn-copy" aria-label="Copy Email to Clipboard">
-                                <span>Copy</span>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                            </button>
-                        </div>
-                        
-                        <div class="socials-wrapper">
-                            <p class="socials-title">Follow me on</p>
-                            <div class="socials-links">
-                                <!-- LinkedIn -->
-                                <a href="https://www.linkedin.com/in/faizhuda" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="LinkedIn Profile">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                                </a>
-                                
-                                <!-- GitHub -->
-                                <a href="https://github.com/faizhuda" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="GitHub Profile">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                                </a>
-                                
-                                <!-- Instagram -->
-                                <a href="https://www.instagram.com/faizhuda" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="Instagram Profile">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                                </a>
-                                
-                                <!-- YouTube -->
-                                <a href="https://www.youtube.com/@faiznhuda" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="YouTube Channel">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right Column: Form -->
-                    <div class="contact-form-wrapper">
-                        <!-- Contact Form -->
-                        <form id="contact-form" class="contact-form">
-                            <input type="hidden" name="access_key" value="6382a77f-b50a-426b-8dd0-5069503932c3">
-                            <input type="hidden" name="subject" value="New Contact Form Submission - Portfolio">
-                            <input type="checkbox" name="botcheck" class="hidden-field">
-
-                            <div class="form-group-row">
-                                <div class="form-group">
-                                    <label for="form-name">Name</label>
-                                    <input type="text" id="form-name" name="name" placeholder="John Doe" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="form-email">Email</label>
-                                    <input type="email" id="form-email" name="email" placeholder="john@example.com" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="form-message">Message</label>
-                                <textarea id="form-message" name="message" rows="3" placeholder="Write your message here..." required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-submit" id="btn-submit">
-                                <span>Send Message</span>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    </main>
-
-    <!-- Toast Notification -->
-    <div class="toast" id="toast" role="status" aria-live="polite">
-        Email copied to clipboard!
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Faiz Naufal Huda, back to top">FNH</a>
+      <nav aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="cv_faiz_naufal_huda.pdf" target="_blank" rel="noopener noreferrer">CV</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; <span id="current-year">2026</span> Faiz Naufal Huda. All rights reserved.</p>
+  <main id="main-content">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Open to Data Science / ML Engineering internships</p>
+          <h1 id="hero-title">Faiz Naufal Huda</h1>
+          <p class="hero-role">Computer Science student building reliable ML systems.</p>
+          <p class="hero-summary">I turn experiments into reproducible software: time-aware evaluation, automated tests, CI, and documented public repositories.</p>
+          <p class="hero-meta">IPB University · GPA 3.85 / 4.00 · Expected October 2027 · Bogor, Indonesia</p>
+          <div class="actions">
+            <a class="button button-primary" href="cv_faiz_naufal_huda.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
+            <a class="button" href="mailto:faiznaufal2015@gmail.com">Email me</a>
+            <a class="text-link" href="https://github.com/faizhuda" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
-    </footer>
 
-    <!-- Custom JS -->
-    <script src="script.js?v=22"></script>
+        <picture class="portrait-frame">
+          <source type="image/avif" srcset="image/profile-320.avif 320w, image/profile-640.avif 640w" sizes="(max-width: 760px) 152px, 260px">
+          <source type="image/webp" srcset="image/profile-320.webp 320w, image/profile-640.webp 640w" sizes="(max-width: 760px) 152px, 260px">
+          <img class="portrait" src="image/profile.png" alt="Faiz Naufal Huda" width="880" height="1173" fetchpriority="high" decoding="async">
+        </picture>
+      </div>
+
+      <div class="container">
+        <dl class="proof-list">
+          <div><dt>3.85 / 4.00</dt><dd>Current GPA</dd></div>
+          <div><dt>Top Graduate</dt><dd>IBM SkillsBuild AI cohort</dd></div>
+          <div><dt>BNSP</dt><dd>Associate Data Scientist</dd></div>
+          <div><dt>607</dt><dd>TOEFL ITP</dd></div>
+          <div><dt>2nd Place</dt><dd>AgritechJam 2025</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Selected work</p>
+            <h2 id="work-title">Three projects, with evidence.</h2>
+          </div>
+          <p>Results are project-level. My contribution is stated separately from the team’s outcome.</p>
+        </div>
+
+        <div class="project-list">
+          <article class="project">
+            <div class="project-index" aria-hidden="true">01</div>
+            <div class="project-body">
+              <div class="project-title-row">
+                <div>
+                  <p class="project-type">Machine learning · Time series</p>
+                  <h3>AQI Bangladesh Prediction</h3>
+                </div>
+                <a class="text-link" href="https://github.com/faizhuda/aqi-bangladesh-prediction" target="_blank" rel="noopener noreferrer">Repository <span aria-hidden="true">↗</span></a>
+              </div>
+              <p>LightGBM pipeline for air-quality prediction across 30 cities, evaluated with walk-forward cross-validation instead of random splits.</p>
+              <ul class="metrics">
+                <li>1M+ rows</li>
+                <li>MAE 1.13</li>
+                <li>RMSE 1.77</li>
+                <li>R² 0.9986</li>
+                <li>40 tests</li>
+              </ul>
+              <p class="contribution"><strong>Contribution:</strong> built with a four-person course team; primary public-repository contributor with 27 of 29 commits.</p>
+              <p class="stack">Python · LightGBM · Pandas · pytest · Docker · GitHub Actions</p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-index" aria-hidden="true">02</div>
+            <div class="project-body">
+              <div class="project-title-row">
+                <div>
+                  <p class="project-type">Computer vision · Experiment design</p>
+                  <h3>Produce Freshness Classification</h3>
+                </div>
+                <a class="text-link" href="https://github.com/faizhuda/produce-freshness-classifier" target="_blank" rel="noopener noreferrer">Repository <span aria-hidden="true">↗</span></a>
+              </div>
+              <p>Compared classical models and MobileNetV2 across 11 controlled scenarios, including paired significance testing for preprocessing choices.</p>
+              <ul class="metrics">
+                <li>98.70% accuracy</li>
+                <li>11 scenarios</li>
+                <li>4,391 test images</li>
+                <li>p &lt; 0.001</li>
+                <li>66 tests</li>
+              </ul>
+              <p class="contribution"><strong>Contribution:</strong> built with a five-person course team; primary public-repository contributor with 64 of 86 commits.</p>
+              <p class="stack">Python · PyTorch · Scikit-learn · SciPy · pytest · GitHub Actions</p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-index" aria-hidden="true">03</div>
+            <div class="project-body">
+              <div class="project-title-row">
+                <div>
+                  <p class="project-type">Full-stack engineering · Document integrity</p>
+                  <h3>AgriDesk</h3>
+                </div>
+                <a class="text-link" href="https://github.com/faizhuda/ads-agridesk" target="_blank" rel="noopener noreferrer">Repository <span aria-hidden="true">↗</span></a>
+              </div>
+              <p>Academic document workflow with state transitions, SHA-256 verification, QR validation, and coordinate-based PDF signature stamping.</p>
+              <ul class="metrics">
+                <li>118 tests</li>
+                <li>100% core coverage</li>
+                <li>36 of 69 commits</li>
+              </ul>
+              <p class="contribution"><strong>Contribution:</strong> led full-stack implementation in a four-person team.</p>
+              <p class="stack">React · FastAPI · PostgreSQL · SQLAlchemy · pytest · Docker</p>
+            </div>
+          </article>
+        </div>
+
+        <aside class="award" aria-label="Additional award">
+          <div>
+            <p class="eyebrow">Additional proof</p>
+            <h3>MyToko · 2nd Place, AgritechJam 2025</h3>
+            <p>Full-stack e-commerce platform built in a three-person team; primary public-repository contributor with 95 of 96 commits.</p>
+          </div>
+          <div class="project-links">
+            <a class="text-link" href="https://mytoko-umber.vercel.app" target="_blank" rel="noopener noreferrer">Live <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="https://github.com/faizhuda/agritechjam-mytoko" target="_blank" rel="noopener noreferrer">Repository <span aria-hidden="true">↗</span></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="experience" aria-labelledby="experience-title">
+      <div class="container narrow">
+        <p class="eyebrow">Experience</p>
+        <h2 id="experience-title">Work beyond coursework.</h2>
+
+        <div class="experience-list">
+          <article class="experience">
+            <div class="experience-date">Feb–Jul 2026</div>
+            <div>
+              <h3>AI Engineer Cohort · Top Graduate</h3>
+              <p class="organization">Pijak × IBM SkillsBuild, delivered through Dicoding</p>
+              <ul>
+                <li>Completed the cohort as a full-pass participant and was recognized as a Top Graduate.</li>
+                <li>Built PriorMail as a capstone, scoring 98/100; fine-tuned DistilBERT for four-class email-priority classification and evaluated phishing detection under adversarial cases.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="experience">
+            <div class="experience-date">Feb–Dec 2025</div>
+            <div>
+              <h3>Head of Entrepreneurship &amp; Consumption Committee</h3>
+              <p class="organization">IT TODAY · HIMALKOM IPB University</p>
+              <ul>
+                <li>Managed an IDR 33 million food-and-beverage budget for 500+ participants and 90+ committee members.</li>
+                <li>Secured IDR 5 million in internal operating funds through committee-led business activity.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">Engineering discipline applied to data.</h2>
+          <p>I am pursuing a Bachelor of Computer Science at IPB University, expected in October 2027. I focus on machine learning systems whose claims can be checked: appropriate validation, reproducible pipelines, tests, and clear documentation.</p>
+          <p>I am looking for an internship where I can contribute to data preparation, experimentation, model evaluation, and production-oriented ML engineering.</p>
+        </div>
+
+        <div class="facts">
+          <div>
+            <h3>Core stack</h3>
+            <p>Python, SQL, Pandas, Scikit-learn, LightGBM, PyTorch, FastAPI, PostgreSQL, Docker, GitHub Actions, pytest</p>
+          </div>
+          <div>
+            <h3>Education</h3>
+            <p>IPB University · Bachelor of Computer Science · GPA 3.85 / 4.00 · 2023–2027 expected</p>
+          </div>
+          <div>
+            <h3>Credentials</h3>
+            <p>BNSP Associate Data Scientist · IBM SkillsBuild AI Engineer Cohort Top Graduate · TOEFL ITP 607</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" aria-labelledby="contact-title">
+      <div class="container contact-inner">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Let’s talk about the work.</h2>
+          <p>The fastest way to reach me is email.</p>
+        </div>
+        <div class="contact-links">
+          <a class="button button-primary" href="mailto:faiznaufal2015@gmail.com">faiznaufal2015@gmail.com</a>
+          <a class="text-link" href="https://www.linkedin.com/in/faizhuda" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="https://github.com/faizhuda" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="cv_faiz_naufal_huda.pdf" target="_blank" rel="noopener noreferrer">CV <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Faiz Naufal Huda</p>
+      <p>Built as a concise record of evidence.</p>
+    </div>
+  </footer>
 </body>
 </html>

@@ -13,6 +13,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Local Sites build output
+dist/
+
 # Private CV variant (contains phone number) — never publish to the public repo
 cv_faiz_naufal_huda_private.typ
 cv_faiz_naufal_huda_private.pdf

@@ -1,6 +1,7 @@
-#set page(paper: "a4", margin: (x: 0.55in, y: 0.45in))
-#set text(font: "New Computer Modern", size: 9.8pt)
-#set par(leading: 0.5em, justify: false)
+#set document(title: "Faiz Naufal Huda — CV", author: "Faiz Naufal Huda")
+#set page(paper: "a4", margin: (x: 0.48in, y: 0.38in))
+#set text(font: "New Computer Modern", size: 9.15pt)
+#set par(leading: 0.43em, justify: false)
 #show link: set text(fill: black)
 #set list(indent: 0.5em, body-indent: 0.8em)
 
@@ -10,10 +11,10 @@
 // ── Header ──────────────────────────────────────────────────────────────────
 
 #align(center)[
-  #text(size: 20pt, weight: "bold")[Faiz Naufal Huda] #linebreak()
-  #v(1pt)
-  Bogor, Indonesia #linebreak()
-  #v(1pt)
+  #text(size: 18.5pt, weight: "bold")[Faiz Naufal Huda] #linebreak()
+  #v(0.5pt)
+  Data Science / ML Engineering Intern · Bogor, Indonesia #linebreak()
+  #v(0.5pt)
   #link("mailto:faiznaufal2015@gmail.com")[faiznaufal2015\@gmail.com]
   #h(5pt)·#h(5pt)
   #link("https://linkedin.com/in/faizhuda")[linkedin.com/in/faizhuda]
@@ -23,7 +24,7 @@
   #link("https://faizhuda.github.io")[faizhuda.github.io]
 ]
 
-#v(-4pt)
+#v(-5pt)
 
 // Body (Summary through Certifications) lives in cv_body.typ, shared with the
 // private variant (cv_faiz_naufal_huda_private.typ) so the two can never drift
