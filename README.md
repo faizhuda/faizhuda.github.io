@@ -8,9 +8,9 @@ The page is intentionally static: semantic HTML, one CSS file, no client-side Ja
 
 - Lead with verifiable outcomes, not self-ratings or slogans.
 - Show three relevant projects instead of a large project wall.
-- Separate team results from individual contribution.
+- Keep project scope and individual contribution consistent with the CV.
 - Link every featured project to its public repository.
-- Keep the CV to one ATS-readable A4 page.
+- Treat the Typst CV and compiled PDF as the source of truth; portfolio copy must follow them.
 
 ## Files
 
