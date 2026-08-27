@@ -308,11 +308,8 @@ strong {
   padding: clamp(64px, 8vw, 112px) 0 0;
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.25fr) 290px;
-  align-items: center;
-  gap: clamp(48px, 6vw, 84px);
+.hero-layout {
+  max-width: 880px;
 }
 
 .status-badge {
@@ -383,7 +380,7 @@ strong {
   font-weight: 400;
   line-height: 1.35;
   color: var(--text-primary);
-  max-width: 680px;
+  max-width: 760px;
   margin-bottom: 16px;
 }
 
@@ -398,7 +395,7 @@ strong {
   font-size: 1.05rem;
   line-height: 1.7;
   color: var(--text-secondary);
-  max-width: 640px;
+  max-width: 720px;
   margin-bottom: 20px;
 }
 
@@ -424,75 +421,6 @@ strong {
 
 .meta-divider {
   color: var(--line-medium);
-}
-
-/* Portrait Presentation */
-.portrait-container {
-  position: relative;
-  width: 100%;
-  max-width: 290px;
-  margin-inline: auto;
-}
-
-.portrait-frame {
-  position: relative;
-  display: block;
-  aspect-ratio: 3 / 4;
-  overflow: hidden;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--line-medium);
-  background: var(--bg-surface);
-  box-shadow:
-    0 16px 40px rgba(0, 0, 0, 0.6),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
-  transition: border-color var(--transition-smooth), transform var(--transition-smooth), box-shadow var(--transition-smooth);
-}
-
-.portrait-frame::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  border: 1px solid var(--gold-border);
-  border-radius: calc(var(--radius-md) - 1px);
-  pointer-events: none;
-  opacity: 0.6;
-  transition: opacity var(--transition-smooth);
-}
-
-.portrait-frame::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: linear-gradient(180deg, transparent 60%, rgba(8, 8, 10, 0.65) 100%);
-  pointer-events: none;
-}
-
-.portrait-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  filter: saturate(0.85) contrast(1.06);
-  transition: transform var(--transition-slow), filter var(--transition-slow);
-}
-
-.portrait-frame:hover {
-  border-color: var(--gold-border);
-  transform: translateY(-3px);
-  box-shadow:
-    0 24px 50px rgba(0, 0, 0, 0.7),
-    0 0 24px rgba(212, 175, 55, 0.12);
-}
-
-.portrait-frame:hover .portrait-img {
-  transform: scale(1.03);
-  filter: saturate(0.95) contrast(1.08);
-}
-
-.portrait-frame:hover::before {
-  opacity: 1;
 }
 
 /* Call to Action Buttons */
@@ -1188,20 +1116,6 @@ strong {
 
   .hero {
     padding-top: 40px;
-  }
-
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 36px;
-  }
-
-  .hero-copy {
-    order: 1;
-  }
-
-  .portrait-container {
-    order: 2;
-    max-width: 220px;
   }
 
   .hero-name {
