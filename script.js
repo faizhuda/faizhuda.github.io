@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- TOUCH HOLD SIMULATOR FOR MOBILE ---
   const touchInteractiveElements = document.querySelectorAll(
-    '.hero-image-wrapper, .glass-card, .btn, .social-icon-link, .btn-copy, .skill-badge, .email-copy-box'
+    '.hero-image-wrapper, .glass-card, .btn, .social-icon-link, .btn-copy, .email-copy-box'
   );
   touchInteractiveElements.forEach(el => {
     el.addEventListener('touchstart', () => {
@@ -201,54 +201,6 @@ document.addEventListener('DOMContentLoaded', () => {
       scrollBar.style.width = `${scrollPercentage}%`;
     }, { passive: true });
   }
-
-  // --- PROJECT FILTERS ---
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
-  
-  if (filterButtons.length > 0 && projectCards.length > 0) {
-    filterButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        // Toggle active button
-        filterButtons.forEach(b => {
-          b.classList.remove('active');
-          b.setAttribute('aria-pressed', 'false');
-        });
-        btn.classList.add('active');
-        btn.setAttribute('aria-pressed', 'true');
-
-        const filterValue = btn.getAttribute('data-filter');
-        
-        projectCards.forEach(card => {
-          const cardCategory = card.getAttribute('data-category');
-          
-          // Clear any active filter timeouts on this card to prevent overlapping transitions
-          if (card.dataset.filterTimeout) {
-            clearTimeout(parseInt(card.dataset.filterTimeout, 10));
-            card.removeAttribute('data-filter-timeout');
-          }
-          
-          if (filterValue === 'all' || cardCategory === filterValue) {
-            card.classList.remove('hidden');
-            // Force reflow
-            void card.offsetWidth;
-            card.classList.remove('fade-out');
-          } else {
-            card.classList.add('fade-out');
-            
-            // Wait for 400ms transition to complete before setting display: none
-            const timeoutId = setTimeout(() => {
-              card.classList.add('hidden');
-              card.removeAttribute('data-filter-timeout');
-            }, 400);
-            
-            card.dataset.filterTimeout = timeoutId.toString();
-          }
-        });
-      });
-    });
-  }
-
 
   // --- CONTACT FORM SUBMISSION ---
   const contactForm = document.getElementById('contact-form');
