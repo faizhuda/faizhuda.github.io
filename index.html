@@ -7,7 +7,7 @@
   <meta name="description" content="Portfolio of Faiz Naufal Huda, an IPB University Computer Science student building tested, reproducible machine-learning systems.">
   <meta name="author" content="Faiz Naufal Huda">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="theme-color" content="#08080a">
+  <meta name="theme-color" content="#070709">
   <meta name="color-scheme" content="dark">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; base-uri 'self'; form-action 'self'; object-src 'none'">
@@ -59,12 +59,12 @@
 
   <link rel="icon" href="image/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="image/profile.png">
-  <link rel="stylesheet" href="style.css?v=41">
+  <link rel="stylesheet" href="style.css?v=42">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- Atelier Site Header -->
+  <!-- Fixed Luxury Atelier Header -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand-wrapper">
@@ -86,21 +86,20 @@
   </header>
 
   <main id="main-content">
-    <!-- Hero Section Atelier -->
+    <!-- Grand Hero Section with Atelier Dossier -->
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="container hero-layout">
-        <div class="hero-copy">
+      <div class="container hero-composition">
+        <!-- Left: Statement & Narrative -->
+        <div class="hero-statement">
           <div class="status-badge" role="status">
             <span class="status-dot" aria-hidden="true"></span>
             <span>Available for Data Science &amp; ML Internships</span>
           </div>
 
-          <div class="hero-title-group">
-            <span class="hero-eyebrow">Portfolio &amp; Selected Works</span>
-            <h1 class="hero-name" id="hero-title">Faiz Naufal Huda</h1>
-            <p class="hero-tagline">Computer Science student building <em>reproducible</em>, production-grade ML systems.</p>
-            <p class="hero-bio">Specializing in time-aware evaluation, statistical rigor, automated testing, and CI/CD pipelines backed by verifiable evidence.</p>
-          </div>
+          <span class="hero-eyebrow">Portfolio &amp; Selected Works</span>
+          <h1 class="hero-name" id="hero-title">Faiz Naufal Huda</h1>
+          <p class="hero-tagline">Computer Science student building <em>reproducible</em>, production-grade ML systems.</p>
+          <p class="hero-bio">Specializing in time-aware evaluation, statistical rigor, automated testing, and CI/CD pipelines backed by verifiable empirical evidence.</p>
 
           <div class="hero-meta-strip">
             <span class="meta-item">IPB University</span>
@@ -130,34 +129,74 @@
             </a>
           </div>
         </div>
+
+        <!-- Right: Technical Dossier Card -->
+        <aside class="hero-dossier" aria-label="Technical Profile Dossier">
+          <div class="dossier-header">
+            <span class="dossier-tag">Specification Dossier</span>
+            <span class="dossier-stamp">ARCHIVE.2026</span>
+          </div>
+          <div class="dossier-body">
+            <div>
+              <p class="dossier-section-title">Core Engineering Disciplines</p>
+              <ul class="dossier-list">
+                <li class="dossier-item">
+                  <span class="dossier-num">01</span>
+                  <span>Machine Learning Systems &amp; Time-Series Forecasting</span>
+                </li>
+                <li class="dossier-item">
+                  <span class="dossier-num">02</span>
+                  <span>Computer Vision &amp; Statistical Experimentation</span>
+                </li>
+                <li class="dossier-item">
+                  <span class="dossier-num">03</span>
+                  <span>Full-Stack Architecture &amp; Document Verification</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dossier-quote">
+              &ldquo;Results are project-level. Every claim is validated through rigorous walk-forward cross-validation, hypothesis testing, and complete test suites.&rdquo;
+            </div>
+
+            <div class="dossier-footer-grid">
+              <div>
+                <p class="dossier-stat-label">Availability</p>
+                <p class="dossier-stat-val">Fall 2026 / 2027</p>
+              </div>
+              <div>
+                <p class="dossier-stat-label">Location Base</p>
+                <p class="dossier-stat-val">Bogor, ID (UTC+7)</p>
+              </div>
+            </div>
+          </div>
+        </aside>
       </div>
 
-      <!-- Specification Benchmark Plate -->
-      <div class="container">
-        <div class="proof-ribbon">
-          <dl class="proof-grid">
-            <div class="proof-card">
-              <dt class="proof-value">3.85<span class="proof-unit"> / 4.00</span></dt>
-              <dd class="proof-label">Current GPA · Top Tier</dd>
-            </div>
-            <div class="proof-card">
-              <dt class="proof-value">Top Graduate</dt>
-              <dd class="proof-label">IBM SkillsBuild AI Cohort</dd>
-            </div>
-            <div class="proof-card">
-              <dt class="proof-value">BNSP</dt>
-              <dd class="proof-label">Associate Data Scientist</dd>
-            </div>
-            <div class="proof-card">
-              <dt class="proof-value">607</dt>
-              <dd class="proof-label">TOEFL ITP Score</dd>
-            </div>
-            <div class="proof-card">
-              <dt class="proof-value">2nd Place</dt>
-              <dd class="proof-label">AgriTechJam 2025</dd>
-            </div>
-          </dl>
-        </div>
+      <!-- Specification Benchmark Plate (5 Faceted Cards) -->
+      <div class="container proof-section">
+        <dl class="proof-grid">
+          <div class="proof-card">
+            <dt class="proof-value">3.85<span class="proof-unit"> / 4.00</span></dt>
+            <dd class="proof-label">Current GPA · Top Tier</dd>
+          </div>
+          <div class="proof-card">
+            <dt class="proof-value">Top Graduate</dt>
+            <dd class="proof-label">IBM SkillsBuild AI Cohort</dd>
+          </div>
+          <div class="proof-card">
+            <dt class="proof-value">BNSP</dt>
+            <dd class="proof-label">Associate Data Scientist</dd>
+          </div>
+          <div class="proof-card">
+            <dt class="proof-value">607</dt>
+            <dd class="proof-label">TOEFL ITP Score</dd>
+          </div>
+          <div class="proof-card">
+            <dt class="proof-value">2nd Place</dt>
+            <dd class="proof-label">AgriTechJam 2025</dd>
+          </div>
+        </dl>
       </div>
     </section>
 
@@ -175,102 +214,132 @@
         <div class="project-collection">
           <!-- Project 01 -->
           <article class="project-card">
-            <div class="project-index" aria-hidden="true">01</div>
-            <div class="project-content">
-              <div class="project-header">
-                <div>
-                  <p class="project-domain">Machine Learning · Time Series Pipeline</p>
-                  <h3 class="project-heading">AQI Bangladesh Prediction</h3>
-                </div>
-                <a class="project-repo-link" href="https://github.com/faizhuda/aqi-bangladesh-prediction" target="_blank" rel="noopener noreferrer">
-                  <span>Repository</span>
-                  <span aria-hidden="true">↗</span>
-                </a>
+            <div class="project-card-top">
+              <div class="project-badge-group">
+                <span class="project-index-badge">ARCHIVE 01</span>
+                <span class="project-domain">Machine Learning · Time Series Pipeline</span>
               </div>
-
-              <p class="project-description">LightGBM pipeline for air-quality prediction across 30 cities, evaluated with walk-forward cross-validation instead of random splits.</p>
-
-              <ul class="metrics-strip">
-                <li class="metric-pill">1M+ rows</li>
-                <li class="metric-pill">MAE 1.13</li>
-                <li class="metric-pill">RMSE 1.77</li>
-                <li class="metric-pill">R² 0.9986</li>
-                <li class="metric-pill">40 tests (pytest)</li>
-              </ul>
-
-              <div class="project-contribution">
-                <p><strong>Contribution:</strong> Independently built the end-to-end ML system, including feature engineering, time-aware evaluation, testing, CI, and containerization.</p>
-              </div>
-
-              <p class="project-stack">Python · LightGBM · Pandas · pytest · Docker · GitHub Actions</p>
+              <a class="project-repo-link" href="https://github.com/faizhuda/aqi-bangladesh-prediction" target="_blank" rel="noopener noreferrer">
+                <span>View Repository</span>
+                <span aria-hidden="true">↗</span>
+              </a>
             </div>
+
+            <h3 class="project-heading">AQI Bangladesh Prediction</h3>
+            <p class="project-description">LightGBM pipeline for air-quality prediction across 30 cities, evaluated with walk-forward cross-validation instead of random splits to prevent temporal data leakage.</p>
+
+            <div class="project-metrics-dashboard">
+              <div class="metric-chip">
+                <span class="metric-chip-val">1M+</span>
+                <span class="metric-chip-label">Rows</span>
+              </div>
+              <div class="metric-chip">
+                <span class="metric-chip-val">1.13</span>
+                <span class="metric-chip-label">MAE</span>
+              </div>
+              <div class="metric-chip">
+                <span class="metric-chip-val">1.77</span>
+                <span class="metric-chip-label">RMSE</span>
+              </div>
+              <div class="metric-chip">
+                <span class="metric-chip-val">0.9986</span>
+                <span class="metric-chip-label">R²</span>
+              </div>
+              <div class="metric-chip">
+                <span class="metric-chip-val">40 Tests</span>
+                <span class="metric-chip-label">pytest</span>
+              </div>
+            </div>
+
+            <div class="project-contribution">
+              <p><strong>Engineering Scope:</strong> Independently built the end-to-end ML system, including feature engineering, time-aware evaluation, testing, CI, and containerization.</p>
+            </div>
+
+            <p class="project-stack">Python · LightGBM · Pandas · pytest · Docker · GitHub Actions</p>
           </article>
 
           <!-- Project 02 -->
           <article class="project-card">
-            <div class="project-index" aria-hidden="true">02</div>
-            <div class="project-content">
-              <div class="project-header">
-                <div>
-                  <p class="project-domain">Computer Vision · Experiment Design</p>
-                  <h3 class="project-heading">Produce Freshness Classification</h3>
-                </div>
-                <a class="project-repo-link" href="https://github.com/faizhuda/produce-freshness-classifier" target="_blank" rel="noopener noreferrer">
-                  <span>Repository</span>
-                  <span aria-hidden="true">↗</span>
-                </a>
+            <div class="project-card-top">
+              <div class="project-badge-group">
+                <span class="project-index-badge">ARCHIVE 02</span>
+                <span class="project-domain">Computer Vision · Experiment Design</span>
               </div>
-
-              <p class="project-description">Compared classical models and MobileNetV2 across 11 controlled scenarios, including paired significance testing for preprocessing choices.</p>
-
-              <ul class="metrics-strip">
-                <li class="metric-pill">98.70% accuracy</li>
-                <li class="metric-pill">11 scenarios</li>
-                <li class="metric-pill">4,391 test images</li>
-                <li class="metric-pill">p &lt; 0.001</li>
-                <li class="metric-pill">64 tests</li>
-              </ul>
-
-              <div class="project-contribution">
-                <p><strong>Contribution:</strong> Independently designed and executed the 11 experiment scenarios and their statistical comparison.</p>
-              </div>
-
-              <p class="project-stack">Python · PyTorch · Scikit-learn · SciPy · pytest · GitHub Actions</p>
+              <a class="project-repo-link" href="https://github.com/faizhuda/produce-freshness-classifier" target="_blank" rel="noopener noreferrer">
+                <span>View Repository</span>
+                <span aria-hidden="true">↗</span>
+              </a>
             </div>
+
+            <h3 class="project-heading">Produce Freshness Classification</h3>
+            <p class="project-description">Compared classical models and MobileNetV2 across 11 controlled scenarios, including paired significance testing for preprocessing choices.</p>
+
+            <div class="project-metrics-dashboard">
+              <div class="metric-chip">
+                <span class="metric-chip-val">98.70%</span>
+                <span class="metric-chip-label">Accuracy</span>
+              </div>
+              <div class="metric-chip">
+                <span class="metric-chip-val">11</span>
+                <span class="metric-chip-label">Scenarios</span>
+              </div>
+              <div class="metric-chip">
+                <span class="metric-chip-val">4,391</span>
+                <span class="metric-chip-label">Images</span>
+              </div>
+              <div class="metric-chip">
+                <span class="metric-chip-val">p &lt; 0.001</span>
+                <span class="metric-chip-label">Significance</span>
+              </div>
+              <div class="metric-chip">
+                <span class="metric-chip-val">64 Tests</span>
+                <span class="metric-chip-label">pytest</span>
+              </div>
+            </div>
+
+            <div class="project-contribution">
+              <p><strong>Engineering Scope:</strong> Independently designed and executed the 11 experiment scenarios and their statistical comparison.</p>
+            </div>
+
+            <p class="project-stack">Python · PyTorch · Scikit-learn · SciPy · pytest · GitHub Actions</p>
           </article>
 
           <!-- Project 03 -->
           <article class="project-card">
-            <div class="project-index" aria-hidden="true">03</div>
-            <div class="project-content">
-              <div class="project-header">
-                <div>
-                  <p class="project-domain">Full-Stack Engineering · Document Integrity</p>
-                  <h3 class="project-heading">AgriDesk</h3>
-                </div>
-                <a class="project-repo-link" href="https://github.com/faizhuda/ads-agridesk" target="_blank" rel="noopener noreferrer">
-                  <span>Repository</span>
-                  <span aria-hidden="true">↗</span>
-                </a>
+            <div class="project-card-top">
+              <div class="project-badge-group">
+                <span class="project-index-badge">ARCHIVE 03</span>
+                <span class="project-domain">Full-Stack Engineering · Document Integrity</span>
               </div>
-
-              <p class="project-description">Academic document workflow with state transitions, SHA-256 verification, QR validation, and coordinate-based PDF signature stamping.</p>
-
-              <ul class="metrics-strip">
-                <li class="metric-pill">118 tests</li>
-                <li class="metric-pill">100% core coverage</li>
-              </ul>
-
-              <div class="project-contribution">
-                <p><strong>Contribution:</strong> Led full-stack development in a four-person team and was solely responsible for the complete local implementation.</p>
-              </div>
-
-              <p class="project-stack">React · FastAPI · PostgreSQL · SQLAlchemy · pytest · Docker</p>
+              <a class="project-repo-link" href="https://github.com/faizhuda/ads-agridesk" target="_blank" rel="noopener noreferrer">
+                <span>View Repository</span>
+                <span aria-hidden="true">↗</span>
+              </a>
             </div>
+
+            <h3 class="project-heading">AgriDesk</h3>
+            <p class="project-description">Academic document workflow with state transitions, SHA-256 verification, QR validation, and coordinate-based PDF signature stamping.</p>
+
+            <div class="project-metrics-dashboard">
+              <div class="metric-chip">
+                <span class="metric-chip-val">118</span>
+                <span class="metric-chip-label">Automated Tests</span>
+              </div>
+              <div class="metric-chip">
+                <span class="metric-chip-val">100%</span>
+                <span class="metric-chip-label">Core Coverage</span>
+              </div>
+            </div>
+
+            <div class="project-contribution">
+              <p><strong>Engineering Scope:</strong> Led full-stack development in a four-person team and was solely responsible for the complete local implementation.</p>
+            </div>
+
+            <p class="project-stack">React · FastAPI · PostgreSQL · SQLAlchemy · pytest · Docker</p>
           </article>
         </div>
 
-        <!-- Accolade Banner -->
+        <!-- Accolade Trophy Banner -->
         <aside class="accolade-banner" aria-label="Additional Hackathon Award">
           <div>
             <p class="accolade-tag">Distinguished Recognition</p>
@@ -293,7 +362,7 @@
 
     <hr class="section-divider">
 
-    <!-- Experience & Timeline Section -->
+    <!-- Experience Section -->
     <section class="section" id="experience" aria-labelledby="experience-title">
       <div class="container-narrow">
         <div class="section-header">
@@ -302,28 +371,28 @@
         </div>
 
         <div class="experience-timeline">
-          <article class="timeline-item">
-            <div class="timeline-date">Feb – Jul 2026</div>
-            <div>
-              <h3 class="timeline-role">AI Engineer Cohort · Top Graduate</h3>
-              <p class="timeline-org">Pijak × IBM SkillsBuild, delivered through Dicoding</p>
-              <ul class="timeline-details">
-                <li>Completed the cohort as a full-pass participant and was recognized as a Top Graduate.</li>
-                <li>Built PriorMail as a capstone, scoring 98/100; fine-tuned DistilBERT for four-class email-priority classification and evaluated phishing detection under adversarial cases.</li>
-              </ul>
+          <article class="timeline-card">
+            <div class="timeline-top">
+              <span class="timeline-date-badge">Feb &ndash; Jul 2026</span>
             </div>
+            <h3 class="timeline-role">AI Engineer Cohort · Top Graduate</h3>
+            <p class="timeline-org">Pijak × IBM SkillsBuild, delivered through Dicoding</p>
+            <ul class="timeline-details">
+              <li>Completed the cohort as a full-pass participant and was recognized as a Top Graduate.</li>
+              <li>Built PriorMail as a capstone, scoring 98/100; fine-tuned DistilBERT for four-class email-priority classification and evaluated phishing detection under adversarial cases.</li>
+            </ul>
           </article>
 
-          <article class="timeline-item">
-            <div class="timeline-date">Feb – Dec 2025</div>
-            <div>
-              <h3 class="timeline-role">Head of Entrepreneurship &amp; Consumption Committee</h3>
-              <p class="timeline-org">IT TODAY · HIMALKOM IPB University</p>
-              <ul class="timeline-details">
-                <li>Managed an IDR 33 million food-and-beverage budget for 500+ participants and 90+ committee members.</li>
-                <li>Secured IDR 5 million in internal operating funds through committee-led business activity.</li>
-              </ul>
+          <article class="timeline-card">
+            <div class="timeline-top">
+              <span class="timeline-date-badge">Feb &ndash; Dec 2025</span>
             </div>
+            <h3 class="timeline-role">Head of Entrepreneurship &amp; Consumption Committee</h3>
+            <p class="timeline-org">IT TODAY · HIMALKOM IPB University</p>
+            <ul class="timeline-details">
+              <li>Managed an IDR 33 million food-and-beverage budget for 500+ participants and 90+ committee members.</li>
+              <li>Secured IDR 5 million in internal operating funds through committee-led business activity.</li>
+            </ul>
           </article>
         </div>
       </div>
@@ -341,16 +410,16 @@
           <p>I am looking for a Data Science, Data Analyst, or ML Engineering internship where I can contribute to data preparation, experimentation, model evaluation, and production-oriented ML systems.</p>
         </div>
 
-        <div class="credentials-plate">
-          <div class="credential-block">
+        <div class="credentials-stack">
+          <div class="credential-card">
             <h3 class="credential-title">Core Stack</h3>
             <p class="credential-value">Python, SQL, Pandas, Scikit-learn, LightGBM, PyTorch, FastAPI, PostgreSQL, Docker, GitHub Actions, pytest</p>
           </div>
-          <div class="credential-block">
+          <div class="credential-card">
             <h3 class="credential-title">Education</h3>
             <p class="credential-value">IPB University · Bachelor of Computer Science · GPA 3.85 / 4.00 · Expected Oct 2027</p>
           </div>
-          <div class="credential-block">
+          <div class="credential-card">
             <h3 class="credential-title">Certifications &amp; Scores</h3>
             <p class="credential-value">BNSP Associate Data Scientist · IBM SkillsBuild AI Engineer Cohort Top Graduate · TOEFL ITP 607</p>
           </div>
